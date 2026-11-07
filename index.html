@@ -1,0 +1,312 @@
+<title>Emporinex</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: asymmetric left-aligned editorial register — a ledger of six service
+   entries under a two-column hero (thesis left, network-ledger mark right) */
+:root{
+  --bg:#F4F1E8; --surface:#E9E3D2; --ink:#14201E; --ink-soft:#4A5A56;
+  --brass:#8C6A2E; --brass-deep:#6B4F1F; --rule:#C9BE9F; --teal:#2B6660;
+  --slate:#3C5490; --sage:#4F7A3F; --mono:#6B5A3A;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161A; --surface:#171E22; --ink:#E9E4D6; --ink-soft:#A7AE9E;
+    --brass:#C4A355; --brass-deep:#D8B868; --rule:#32393A; --teal:#5FC4B8;
+    --slate:#8FA8E8; --sage:#9BD17E; --mono:#A7925E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161A; --surface:#171E22; --ink:#E9E4D6; --ink-soft:#A7AE9E;
+  --brass:#C4A355; --brass-deep:#D8B868; --rule:#32393A; --teal:#5FC4B8;
+  --slate:#8FA8E8; --sage:#9BD17E; --mono:#A7925E;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px; margin:0 auto; padding-block:0;}
+a{color:var(--brass-deep)}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; text-wrap:balance; margin:0}
+::selection{background:var(--brass); color:var(--bg)}
+:focus-visible{outline:2px solid var(--teal); outline-offset:3px}
+@media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important} }
+
+/* ---------- header ---------- */
+header{padding-block:28px 18px; border-bottom:1px solid var(--rule)}
+.nav{display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.wordmark{font-family:'Fraunces',serif; font-weight:600; font-size:22px; letter-spacing:.01em}
+.wordmark em{font-style:normal; color:var(--brass-deep)}
+nav.links{display:flex; gap:22px; flex-wrap:wrap; font-size:14px}
+nav.links a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px}
+nav.links a:hover{border-color:var(--brass-deep); color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:56px 48px; display:grid; grid-template-columns:1.3fr 1fr; gap:48px; align-items:center}
+@media (max-width:760px){ .hero{grid-template-columns:1fr} }
+.hero h1{font-size:clamp(34px,5vw,54px); line-height:1.08; max-width:14ch}
+.hero p.lede{font-family:'IBM Plex Sans'; font-size:17px; color:var(--ink-soft); max-width:46ch; margin-top:18px}
+.hero .cta-row{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap}
+.btn{display:inline-block; padding:12px 22px; border-radius:2px; font-size:14px; font-weight:500; text-decoration:none; border:1px solid var(--ink)}
+.btn.primary{background:var(--ink); color:var(--bg)}
+.btn.primary:hover{background:var(--brass-deep); border-color:var(--brass-deep)}
+.btn.ghost{color:var(--ink); border-color:var(--rule)}
+.btn.ghost:hover{border-color:var(--ink)}
+
+/* network-ledger mark: nodes resolving into a single ledger line, drawn once on load */
+.mark{width:100%; aspect-ratio:1/0.82}
+.mark svg{width:100%; height:100%; display:block}
+.mark .node{fill:var(--brass-deep)}
+.mark .edge{stroke:var(--teal); stroke-width:1; fill:none; opacity:.55}
+.mark .ledger{stroke:var(--ink); stroke-width:1.4; fill:none}
+.mark .draw{stroke-dasharray:600; stroke-dashoffset:600; animation:draw 1.6s ease-out .2s forwards}
+.mark .fade{opacity:0; animation:fade .9s ease-out .9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion: reduce){ .mark .draw{stroke-dashoffset:0; animation:none} .mark .fade{opacity:1; animation:none} }
+
+/* ---------- registry (services) ---------- */
+section{padding-block:44px}
+.section-head{display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:8px; flex-wrap:wrap}
+.section-head h2{font-size:26px}
+.section-head .count{font-family:'IBM Plex Mono'; font-size:13px; color:var(--mono)}
+
+.entry{display:grid; grid-template-columns:120px 1fr; gap:24px; padding-block:26px 24px; padding-left:14px; border-bottom:1px solid var(--rule); border-left:3px solid var(--entry-accent, var(--brass))}
+@media (max-width:620px){ .entry{grid-template-columns:1fr; gap:8px} }
+.entry .code{font-family:'IBM Plex Mono'; font-size:13px; color:var(--entry-accent, var(--mono)); letter-spacing:.02em; padding-top:3px; font-weight:500}
+.entry h3{font-size:20px; margin-bottom:8px}
+.entry p{color:var(--ink-soft); max-width:62ch; font-size:15px}
+.entry.accent-brass{--entry-accent:var(--brass-deep)}
+.entry.accent-teal{--entry-accent:var(--teal)}
+.entry.accent-slate{--entry-accent:var(--slate)}
+.entry.accent-sage{--entry-accent:var(--sage)}
+
+/* ---------- watch block callout ---------- */
+.callout{background:var(--surface); border:1px solid var(--rule); border-radius:3px; padding:32px; margin-top:12px}
+.callout .tag{font-family:'IBM Plex Mono'; font-size:12px; color:var(--teal); letter-spacing:.03em}
+.callout h3{font-size:24px; margin-top:8px}
+.callout p{color:var(--ink-soft); max-width:68ch; margin-top:14px; font-size:15px}
+.stat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:26px}
+@media (max-width:620px){ .stat-grid{grid-template-columns:1fr} }
+.stat{border-left:2px solid var(--stat-accent, var(--brass-deep)); padding-left:16px}
+.stat .num{font-family:'Fraunces',serif; font-size:28px; color:var(--stat-accent, var(--ink))}
+.stat .label{font-size:13px; color:var(--ink-soft); margin-top:4px}
+.stat:nth-child(1){--stat-accent:var(--teal)}
+.stat:nth-child(2){--stat-accent:var(--brass-deep)}
+.stat:nth-child(3){--stat-accent:var(--slate)}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px}
+@media (max-width:620px){ .two-col{grid-template-columns:1fr} }
+.two-col h4{font-family:'IBM Plex Sans'; font-size:14px; font-weight:600; margin-bottom:10px}
+.two-col ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14px}
+.two-col li{margin-bottom:6px}
+
+/* ---------- trust / compliance ---------- */
+.frameworks{display:flex; gap:28px; flex-wrap:wrap; margin-top:18px}
+.framework{font-family:'IBM Plex Mono'; font-size:13px; color:var(--ink-soft); border:1px solid var(--rule); padding:8px 14px; border-radius:2px}
+
+/* ---------- contact / footer ---------- */
+footer{border-top:1px solid var(--rule); padding-block:36px 48px; margin-top:20px}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px}
+@media (max-width:620px){ .contact-grid{grid-template-columns:1fr} }
+.contact-grid h4{font-size:14px; font-weight:600; margin-bottom:10px; font-family:'IBM Plex Sans'}
+.copyline{font-size:14px; color:var(--ink-soft)}
+.copy-btn{font-family:'IBM Plex Mono'; font-size:14px; background:none; border:1px solid var(--rule); padding:7px 12px; border-radius:2px; color:var(--ink); cursor:pointer}
+.copy-btn:hover{border-color:var(--brass-deep)}
+.foot-bottom{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:34px; font-size:13px; color:var(--mono)}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="nav">
+      <div class="wordmark">EMPOR<em>I</em>NEX</div>
+      <nav class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#watchblock">Watch Block</a>
+        <a href="#compliance">Cumplimiento</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Un emporio de servicios cripto, con el rigor de una casa de cambio.</h1>
+      <p class="lede">Emporinex conecta activos virtuales, inteligencia artificial y cumplimiento normativo en un mismo lugar, para personas y empresas que operan en el ecosistema blockchain de América Latina.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contacto">Hablar con un asesor</a>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 320 260">
+        <g class="edge fade">
+          <line x1="60" y1="60" x2="160" y2="120"/>
+          <line x1="160" y1="120" x2="260" y2="70"/>
+          <line x1="160" y1="120" x2="90" y2="190"/>
+          <line x1="160" y1="120" x2="240" y2="190"/>
+          <line x1="60" y1="60" x2="90" y2="190"/>
+          <line x1="260" y1="70" x2="240" y2="190"/>
+        </g>
+        <circle class="node fade" cx="60" cy="60" r="5"/>
+        <circle class="node fade" cx="260" cy="70" r="5"/>
+        <circle class="node fade" cx="160" cy="120" r="6.5"/>
+        <circle class="node fade" cx="90" cy="190" r="5"/>
+        <circle class="node fade" cx="240" cy="190" r="5"/>
+        <path class="ledger draw" d="M20 230 H300" />
+      </svg>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="section-head">
+      <h2>Líneas de servicio</h2>
+      <span class="count">Registro 01&ndash;06</span>
+    </div>
+
+    <div class="entry accent-brass">
+      <div class="code">EMX&middot;01&middot;AV</div>
+      <div><h3>Compra y venta de activos virtuales</h3>
+      <p>Intermediación en la adquisición y liquidación de criptoactivos para personas naturales y empresas, con tarifas ajustadas al mercado latinoamericano.</p></div>
+    </div>
+
+    <div class="entry accent-teal">
+      <div class="code">EMX&middot;02&middot;IA</div>
+      <div><h3>Asesores cripto con IA</h3>
+      <p>Acompañamiento continuo apoyado en inteligencia artificial para decisiones de portafolio, gestión de riesgo y seguimiento de posiciones, dirigido a personas y empresas.</p></div>
+    </div>
+
+    <div class="entry accent-slate">
+      <div class="code">EMX&middot;03&middot;SW</div>
+      <div><h3>Implementación de IA a la medida</h3>
+      <p>Desarrollo de software propio que integra inteligencia artificial con sistemas cripto existentes, adaptado a la operación de cada cliente, persona o empresa.</p></div>
+    </div>
+
+    <div class="entry accent-sage">
+      <div class="code">EMX&middot;04&middot;CP</div>
+      <div><h3>Agente de cumplimiento contable cripto</h3>
+      <p>Trámite y acompañamiento contable especializado en operaciones con criptoactivos, alineado con las obligaciones normativas vigentes.</p></div>
+    </div>
+
+    <div class="entry accent-brass">
+      <div class="code">EMX&middot;05&middot;FX</div>
+      <div><h3>Investigación cripto forense</h3>
+      <p>Análisis forense on-chain ante fraude, bloqueo o robo de activos digitales, con enfoque preventivo y correctivo. Esta línea se presta a través de Watch Block Forensic Intelligence — ver detalle abajo.</p></div>
+    </div>
+
+    <div class="entry accent-teal">
+      <div class="code">EMX&middot;06&middot;ED</div>
+      <div><h3>Conferencias y capacitaciones</h3>
+      <p>Formación sobre el ecosistema blockchain y cripto completo, diseñada para equipos, aliados y audiencias que necesitan entender el sector antes de operar en él.</p></div>
+    </div>
+  </section>
+
+  <section id="watchblock">
+    <div class="section-head">
+      <h2>Watch Block Forensic Intelligence</h2>
+      <span class="count">ABBI&middot;000023</span>
+    </div>
+    <div class="callout">
+      <div class="tag">Firma aliada &middot; análisis forense blockchain</div>
+      <h3>Trazabilidad on-chain con marco regulatorio internacional</h3>
+      <p>Firma colombiana con sede en Cali especializada en análisis forense blockchain, investigación de activos digitales y cumplimiento cripto para el mercado latinoamericano. Combina metodología técnica de trazabilidad on-chain con marcos regulatorios internacionales (FATF, OFAC, UIAF) para apoyar a personas naturales, empresas, firmas de abogados y autoridades. Todos los servicios se prestan de forma virtual; si se requiere presencia física, los viáticos corren por cuenta del cliente.</p>
+
+      <div class="stat-grid">
+        <div class="stat"><div class="num">7+ capas</div><div class="label">Trazabilidad backward / forward en cualquier red blockchain</div></div>
+        <div class="stat"><div class="num">60%</div><div class="label">Tarifas por debajo de firmas internacionales, en USD ajustado a LATAM</div></div>
+        <div class="stat"><div class="num">Propio</div><div class="label">Grafo interactivo de trazabilidad, sin licencias de terceros</div></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Membresía premium</h4>
+          <ul>
+            <li>Aviso en tiempo real de billetera en riesgo de bloqueo</li>
+            <li>Informe semanal de riesgo AML de las transacciones</li>
+            <li>Recomendaciones de buenas prácticas</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Desbloqueo de cuentas</h4>
+          <ul>
+            <li>Preanálisis de la cuenta afectada</li>
+            <li>Análisis forense de la causa raíz</li>
+            <li>Solicitud de desbloqueo según factibilidad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compliance">
+    <div class="section-head">
+      <h2>Cumplimiento</h2>
+    </div>
+    <p style="color:var(--ink-soft); max-width:62ch; font-size:15px">
+      La investigación forense opera bajo marcos regulatorios reconocidos internacionalmente y con membresía certificada en la industria de inteligencia blockchain.
+    </p>
+    <div class="frameworks">
+      <span class="framework">FATF</span>
+      <span class="framework">OFAC</span>
+      <span class="framework">UIAF</span>
+      <span class="framework" style="color:var(--brass-deep); border-color:var(--brass-deep)">ABBI &middot; miembro certificado</span>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="contact-grid">
+      <div>
+        <h4>Escríbenos</h4>
+        <p class="copyline" style="margin-bottom:10px">contacto@emporinex.com</p>
+        <button class="copy-btn" id="copyEmail" type="button">Copiar correo</button>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <p class="copyline">LinkedIn y X &mdash; cuentas en configuración, enlaces próximamente.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Emporinex &mdash; Colombia</span>
+      <span>Operado por SERVIGLOBAL DE COLOMBIA S.A.S.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('copyEmail');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var email = 'contacto@emporinex.com';
+    function fallback(){
+      var r = document.createRange();
+      var span = document.createElement('span');
+      span.textContent = email;
+      span.style.position='fixed'; span.style.opacity='0';
+      document.body.appendChild(span);
+      r.selectNode(span);
+      var sel = window.getSelection();
+      sel.removeAllRanges(); sel.addRange(r);
+      try{ document.execCommand('copy'); }catch(e){}
+      sel.removeAllRanges();
+      document.body.removeChild(span);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(function(){
+        btn.textContent = 'Copiado';
+        setTimeout(function(){ btn.textContent = 'Copiar correo'; }, 1800);
+      }).catch(fallback);
+    } else { fallback(); btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar correo'; }, 1800); }
+  });
+})();
+</script>
