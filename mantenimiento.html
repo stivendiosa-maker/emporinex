@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#050E12">
+<title>EMPORINEX · Sitio en construcción</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050E12; --bg-deep:#031117; --surface:#0B222B;
+  --ink:#EAF6F3; --muted:#8FB3AE; --dim:#5F7F7A;
+  --teal:#36E8D1; --blue:#7FB2FF; --lime:#A3FF4F;
+  --line:rgba(234,246,243,.10);
+  --display:'Clash Display',system-ui,sans-serif;
+  --body:'Satoshi',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--body);
+  line-height:1.6;
+  display:grid;
+  grid-template-rows:1fr auto;
+  min-height:100svh;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 620px at 12% -8%, rgba(54,232,209,.18), transparent 60%),
+    radial-gradient(820px 560px at 92% 6%, rgba(127,178,255,.16), transparent 60%),
+    linear-gradient(180deg,var(--bg) 0%,var(--bg-deep) 100%);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(234,246,243,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234,246,243,.035) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 30%, transparent 85%);
+          mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 30%, transparent 85%);
+}
+.orbit{
+  position:fixed;left:50%;top:50%;width:min(820px,120vw);aspect-ratio:1/1;
+  transform:translate(-50%,-50%);z-index:-1;pointer-events:none;opacity:.55;
+}
+.orbit .ring{transform-origin:center;animation:spin 40s linear infinite}
+.orbit .ring2{transform-origin:center;animation:spin 70s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+main{
+  width:min(760px,90vw);margin:0 auto;padding:8vh 0 6vh;
+  display:flex;flex-direction:column;justify-content:center;min-height:70svh;
+}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:clamp(2rem,6vh,4rem)}
+.brand img{width:clamp(54px,7vw,76px);height:auto;display:block;filter:drop-shadow(0 0 22px rgba(54,232,209,.35))}
+.brand .name{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2.4vw,1.5rem);letter-spacing:.16em}
+.brand .name em{font-style:normal;color:var(--teal)}
+.brand .sub{font-family:var(--mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-top:2px}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:1.2rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--teal),transparent)}
+h1{
+  font-family:var(--display);font-weight:600;
+  font-size:clamp(2.1rem,6vw,4.2rem);
+  line-height:1.02;letter-spacing:-.025em;max-width:16ch;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--teal),var(--blue) 55%,var(--lime));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+p.lede{margin-top:1.5rem;max-width:48ch;color:var(--muted);font-size:clamp(1rem,1.4vw,1.12rem)}
+.actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.85rem 1.35rem;border-radius:999px;
+  background:linear-gradient(120deg,var(--teal),var(--blue));color:#04161A;
+  font-weight:700;font-size:.9rem;text-decoration:none;
+  box-shadow:0 14px 40px -16px rgba(54,232,209,.6);
+  transition:transform .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 48px -18px rgba(54,232,209,.75)}
+.btn svg{width:15px;height:15px}
+.status{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);
+}
+.status .dot{
+  width:8px;height:8px;border-radius:50%;background:var(--lime);
+  box-shadow:0 0 0 0 rgba(163,255,79,.6);animation:pulse 2.2s ease-out infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(163,255,79,.55)}
+  70%{box-shadow:0 0 0 10px rgba(163,255,79,0)}
+  100%{box-shadow:0 0 0 0 rgba(163,255,79,0)}
+}
+footer{
+  width:min(1180px,92vw);margin:0 auto;padding:1.6rem 0 1.8rem;
+  border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--dim);
+}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--teal)}
+@media (max-width:640px){
+  main{padding-top:6vh}
+  .brand{margin-bottom:2.4rem}
+  h1{max-width:100%}
+  footer{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  .orbit .ring,.orbit .ring2,.status .dot{animation:none}
+}
+</style>
+</head>
+<body>
+
+<svg class="orbit" viewBox="0 0 800 800" aria-hidden="true">
+  <defs>
+    <linearGradient id="orb" x1="0" y1="400" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#36E8D1" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#36E8D1" stop-opacity=".5"/>
+      <stop offset=".62" stop-color="#7FB2FF" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#A3FF4F" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="400" cy="400" r="300" fill="none" stroke="rgba(234,246,243,.06)" stroke-width="1"/>
+  <g class="ring">
+    <ellipse cx="400" cy="400" rx="380" ry="120" fill="none" stroke="url(#orb)" stroke-width="1.4"/>
+    <circle cx="780" cy="400" r="4" fill="#36E8D1"/>
+  </g>
+  <g class="ring2">
+    <ellipse cx="400" cy="400" rx="340" ry="220" fill="none" stroke="url(#orb)" stroke-width="1" opacity=".5"/>
+  </g>
+</svg>
+
+<main>
+  <div class="brand">
+    <img src="logo-emporinex-3d.png" alt="Emporinex">
+    <div>
+      <div class="name">EMPOR<em>I</em>NEX</div>
+      <div class="sub">Digital Finance &amp; Intelligence</div>
+    </div>
+  </div>
+
+  <span class="eyebrow">Sitio en construcción</span>
+  <h1>Estamos construyendo una <em>nueva experiencia digital</em>.</h1>
+  <p class="lede">Emporinex está renovando su presencia digital. Muy pronto estará disponible. Mientras tanto, puedes escribirnos y con gusto te atendemos.</p>
+
+  <div class="actions">
+    <a class="btn" href="mailto:contacto@emporinex.com">
+      contacto@emporinex.com
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <span class="status"><span class="dot"></span>Trabajando en ello</span>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Emporinex · Colombia</span>
+  <span>Operado por SERVIGLOBAL DE COLOMBIA S.A.S.</span>
+</footer>
+
+</body>
+</html>
