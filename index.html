@@ -3,37 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Emporinex</title>
+<title>EMPORINEX · Finanzas Digitales &amp; Inteligencia</title>
+<meta name="description" content="Emporinex conecta activos virtuales, inteligencia artificial, análisis forense blockchain y cumplimiento normativo para personas y empresas en América Latina.">
+<meta name="theme-color" content="#03091B">
 <meta name="claude:viewport-fit-sides" content="cover">
 <script>document.documentElement.lang = 'es-CO';</script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F2F7F6; --bg-deep:#E3EEEC; --surface:#FFFFFF; --surface-2:#EAF2F1;
-  --ink:#0A2420; --ink-soft:#44615C; --rule:rgba(10,36,32,.12);
-  --brass:#9C7A2E; --brass-deep:#7A5E22; --teal:#0E8C78; --teal-glow:#0E8C78;
-  --slate:#2E5FC9; --sage:#3C8A4C; --mono:#2F5C53;
-  --glow-a:.10; --glow-b:.06; --card-shadow:0 10px 30px -14px rgba(10,36,32,.18);
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#061A22; --bg-deep:#031117; --surface:#0C2733; --surface-2:#10303E;
-    --ink:#EAF6F3; --ink-soft:#9FC3BE; --rule:rgba(255,255,255,.12);
-    --brass:#E8C87D; --brass-deep:#D9B36A; --teal:#36E8D1; --teal-glow:#36E8D1;
-    --slate:#7FB2FF; --sage:#8CE39B; --mono:#7FC2B5;
-    --glow-a:.55; --glow-b:.30; --card-shadow:0 20px 50px -20px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#061A22; --bg-deep:#031117; --surface:#0C2733; --surface-2:#10303E;
-  --ink:#EAF6F3; --ink-soft:#9FC3BE; --rule:rgba(255,255,255,.12);
-  --brass:#E8C87D; --brass-deep:#D9B36A; --teal:#36E8D1; --teal-glow:#36E8D1;
-  --slate:#7FB2FF; --sage:#8CE39B; --mono:#7FC2B5;
-  --glow-a:.55; --glow-b:.30; --card-shadow:0 20px 50px -20px rgba(0,0,0,.6);
+  --bg:#03091B; --bg-deep:#020617; --surface:#071A35; --surface-2:#0A2450;
+  --ink:#F3F7FC; --ink-soft:#A7BCD4; --rule:rgba(177,211,245,.16);
+  --blue:#168BFF; --blue-deep:#075DCE; --teal:#00E1F0; --teal-glow:#00CFFF;
+  --lime:#38CFFF; --aqua:#73DDF3; --mono:#9BC9E8;
+  --glow-a:.30; --glow-b:.18; --card-shadow:0 24px 60px -28px rgba(0,0,0,.75);
   color-scheme: dark;
 }
 
@@ -41,11 +27,11 @@
 body{
   background:
     radial-gradient(1100px 620px at 86% -6%, color-mix(in srgb, var(--teal) calc(var(--glow-a)*100%), transparent), transparent 60%),
-    radial-gradient(900px 500px at 6% 8%, color-mix(in srgb, var(--slate) calc(var(--glow-b)*100%), transparent), transparent 60%),
+    radial-gradient(900px 500px at 6% 8%, color-mix(in srgb, var(--blue) calc(var(--glow-b)*100%), transparent), transparent 60%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
   background-attachment:fixed;
   color:var(--ink);
-  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  font-family:'Inter',system-ui,sans-serif;
   padding-left:max(16px, env(safe-area-inset-left,0px));
   padding-right:max(16px, env(safe-area-inset-right,0px));
   line-height:1.5;
@@ -53,22 +39,19 @@ body{
 }
 .wrap{max-width:1180px; margin:0 auto; position:relative; overflow-x:clip;}
 a{color:var(--teal); text-decoration:none}
-h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:650; font-variation-settings:'opsz' 60,'wght' 650; text-rendering:optimizeLegibility; text-wrap:balance; margin:0}
+h1,h2,h3{font-family:'Montserrat',system-ui,sans-serif; font-weight:600; letter-spacing:-.015em; text-rendering:optimizeLegibility; text-wrap:balance; margin:0}
 ::selection{background:var(--teal); color:var(--bg-deep)}
 :focus-visible{outline:2px solid var(--teal); outline-offset:3px}
 @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important} }
-.eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono'; font-size:12.5px; letter-spacing:.06em; color:var(--teal); text-transform:uppercase}
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono'; font-size:12.5px; letter-spacing:.06em; color:var(--teal); text-transform:uppercase}
 .eyebrow .rule{width:18px; height:1px; background:var(--teal); display:inline-block}
 
 /* ---------- header ---------- */
-header{padding-block:22px 16px; position:sticky; top:0; z-index:20; backdrop-filter:blur(10px); background:color-mix(in srgb, var(--bg) 78%, transparent); border-bottom:1px solid var(--rule)}
+header{padding-block:22px 16px; position:relative; z-index:20; background:transparent; border-bottom:none}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap}
-.brand{display:flex; align-items:center; gap:11px}
-.seal{flex:none; display:block; filter:drop-shadow(0 0 6px color-mix(in srgb, var(--teal) 45%, transparent))}
-.brand-text{display:flex; flex-direction:column; line-height:1.15}
-.wordmark{font-family:'Fraunces',serif; font-weight:650; font-size:20px; letter-spacing:.02em}
-.wordmark em{font-style:normal; color:var(--teal)}
-.tagline{font-family:'IBM Plex Mono'; font-size:10.5px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase; margin-top:1px}
+.brand{display:flex; align-items:center; gap:14px}
+.brand-lockup{display:block; width:300px; max-width:100%; height:auto; filter:drop-shadow(0 4px 18px rgba(0,174,255,.13))}
+@media (max-width:520px){.brand-lockup{width:220px}}
 
 nav.links{display:flex; align-items:center; gap:26px; flex-wrap:wrap; font-size:14.5px}
 nav.links > a, .has-drop > button{color:var(--ink-soft); background:none; border:none; font:inherit; display:flex; align-items:center; gap:5px; cursor:pointer; padding:4px 0}
@@ -76,17 +59,17 @@ nav.links > a:hover, .has-drop > button:hover{color:var(--ink)}
 .has-drop{position:relative}
 .has-drop svg{width:11px; height:11px; opacity:.7}
 .dropdown{position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(6px); min-width:220px; background:var(--surface); border:1px solid var(--rule); border-radius:10px; padding:8px; box-shadow:var(--card-shadow); opacity:0; pointer-events:none; transition:opacity .15s ease, transform .15s ease}
+.dropdown::before{content:""; position:absolute; left:0; right:0; top:-15px; height:15px}
 .has-drop:hover .dropdown, .has-drop:focus-within .dropdown{opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0)}
 .dropdown a{display:block; padding:9px 12px; border-radius:7px; color:var(--ink-soft); font-size:14px}
 .dropdown a:hover{background:var(--surface-2); color:var(--ink)}
-.nav-actions{display:flex; align-items:center; gap:14px}
 .icon-btn{width:36px; height:36px; border-radius:50%; border:1px solid var(--rule); display:grid; place-items:center; color:var(--ink-soft); background:none; cursor:pointer}
 .icon-btn:hover{color:var(--ink); border-color:var(--teal)}
 .icon-btn svg{width:16px; height:16px}
 
 .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:999px; font-size:14px; font-weight:600; text-decoration:none; border:1px solid transparent; white-space:nowrap}
 .btn svg{width:14px; height:14px}
-.btn.primary{background:linear-gradient(135deg, var(--teal), var(--slate)); color:#04161A}
+.btn.primary{background:linear-gradient(135deg, var(--teal), var(--blue)); color:#04161A}
 .btn.primary:hover{filter:brightness(1.08)}
 .btn.ghost{color:var(--ink); border-color:var(--rule); background:color-mix(in srgb, var(--surface) 60%, transparent)}
 .btn.ghost:hover{border-color:var(--teal); color:var(--teal)}
@@ -95,112 +78,230 @@ nav.links > a:hover, .has-drop > button:hover{color:var(--ink)}
 .hero{padding-block:52px 40px; display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center; position:relative}
 @media (max-width:860px){ .hero{grid-template-columns:1fr} }
 .hero-badge{margin-bottom:18px}
-.hero h1{font-size:clamp(32px,4.6vw,52px); line-height:1.08; max-width:15ch}
-.hero h1 .hl{color:var(--teal)}
-.hero p.lede{font-family:'IBM Plex Sans'; font-size:16.5px; color:var(--ink-soft); max-width:46ch; margin-top:18px}
+.hero h1{font-size:clamp(32px,4.2vw,48px); line-height:1.06; letter-spacing:-.02em; max-width:23ch}
+.hero h1 .line{display:block}
+.hero h1 .hl{background:linear-gradient(100deg,var(--teal),var(--blue)); -webkit-background-clip:text; background-clip:text; color:transparent}
+@media (max-width:860px){ .hero h1 .line{display:inline} }
+.hero p.lede{font-family:'Inter',system-ui,sans-serif; font-size:16.5px; color:var(--ink-soft); max-width:46ch; margin-top:18px}
 .hero .cta-row{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap}
 
 /* globe + network graphic */
-.globe-wrap{position:relative; aspect-ratio:1/0.92; display:grid; place-items:center}
-.globe-wrap svg{width:100%; height:100%; display:block; overflow:visible}
-.globe-ring{animation:spin 40s linear infinite; transform-origin:center}
+.globe-wrap{position:relative; aspect-ratio:1/1; display:grid; place-items:center; isolation:isolate}
+.globe-wrap::before{content:""; position:absolute; width:82%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle, color-mix(in srgb, var(--teal) 22%, transparent), transparent 66%); filter:blur(34px); z-index:0}
+.globe-image{position:relative; z-index:2; width:100%; height:100%; display:block; filter:drop-shadow(0 34px 70px rgba(0,0,0,.65))}
+.globe-candles{position:absolute; inset:-8% -12%; z-index:0; opacity:.35; pointer-events:none; -webkit-mask-image:radial-gradient(ellipse 52% 52% at 50% 50%, transparent 28%, #000 76%); mask-image:radial-gradient(ellipse 52% 52% at 50% 50%, transparent 28%, #000 76%)}
+.globe-candles svg{width:100%; height:100%; display:block}
+.globe-orbit{position:absolute; inset:0; width:100%; height:100%; z-index:3; pointer-events:none; overflow:visible}
+.globe-orbit .ring{animation:spin 46s linear infinite; transform-origin:center}
+.globe-orbit .ring--fast{animation-duration:32s}
+.globe-orbit .ring--slow{animation-duration:64s; animation-direction:reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-.globe-dot{fill:var(--teal); opacity:.85}
-.globe-dot.b{fill:var(--brass)}
-.globe-dot.s{fill:var(--slate)}
-.globe-line{stroke:var(--teal); stroke-width:1; fill:none; opacity:.35}
-.globe-core{fill:url(#coreGlow)}
-.pulse{animation:pulse 2.6s ease-in-out infinite}
-.pulse.d2{animation-delay:.6s}
-.pulse.d3{animation-delay:1.2s}
-@keyframes pulse{0%,100%{opacity:.5; r:2.4} 50%{opacity:1; r:3.6}}
-@media (prefers-reduced-motion: reduce){ .globe-ring{animation:none} .pulse{animation:none} }
-.candles{position:absolute; top:0; right:0; width:46%; height:100%; z-index:-1; opacity:.22; mask-image:linear-gradient(to left, black 40%, transparent 95%)}
-.candles svg{width:100%; height:100%}
-@media (max-width:860px){ .candles{display:none} }
+@media (prefers-reduced-motion: reduce){ .globe-orbit .ring{animation:none} }
+@media (max-width:860px){ .globe-candles{display:none} .globe-wrap{max-width:520px; margin-inline:auto} }
 
 /* ---------- feature strip ---------- */
-.feature-strip{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:8px}
-@media (max-width:860px){ .feature-strip{grid-template-columns:1fr 1fr} }
-@media (max-width:520px){ .feature-strip{grid-template-columns:1fr} }
+.feature-strip{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:8px}
+@media (max-width:600px){ .feature-strip{grid-template-columns:1fr} }
 .feature-card{background:var(--surface); border:1px solid var(--rule); border-radius:14px; padding:18px; display:flex; align-items:center; gap:13px; box-shadow:var(--card-shadow); transition:transform .15s ease, border-color .15s ease}
 .feature-card:hover{transform:translateY(-3px); border-color:var(--teal)}
 .feature-card .ico{width:42px; height:42px; border-radius:11px; display:grid; place-items:center; flex:none}
 .feature-card .ico svg{width:21px; height:21px}
 .feature-card .ttl{font-size:14.5px; font-weight:600}
 .feature-card .sub{font-size:12.5px; color:var(--ink-soft); margin-top:1px}
+.feature-card{color:var(--ink)}
+.feature-card .arrow{margin-left:auto; color:var(--teal); font-size:20px}
 .ico.teal{background:color-mix(in srgb, var(--teal) 16%, transparent); color:var(--teal)}
-.ico.brass{background:color-mix(in srgb, var(--brass) 16%, transparent); color:var(--brass)}
-.ico.slate{background:color-mix(in srgb, var(--slate) 16%, transparent); color:var(--slate)}
-.ico.sage{background:color-mix(in srgb, var(--sage) 16%, transparent); color:var(--sage)}
+.ico.blue{background:color-mix(in srgb, var(--blue) 16%, transparent); color:var(--blue)}
+.ico.lime{background:color-mix(in srgb, var(--lime) 16%, transparent); color:var(--lime)}
+.ico.aqua{background:color-mix(in srgb, var(--aqua) 16%, transparent); color:var(--aqua)}
 
 /* ---------- sections ---------- */
 section{padding-block:56px}
 .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:30px; flex-wrap:wrap}
 .section-head h2{font-size:clamp(24px,3vw,32px); margin-top:10px; max-width:20ch}
 .section-head p{color:var(--ink-soft); font-size:15px; max-width:52ch; margin-top:10px}
+#nosotros .section-head{justify-content:center; text-align:center}
+#nosotros .section-head>div{width:min(100%,900px)}
+#nosotros .section-head .eyebrow{justify-content:center}
+#nosotros .section-head h2{max-width:none; margin-inline:auto}
+#nosotros .section-head p{max-width:78ch; margin:14px auto 0; text-align:justify; text-justify:inter-word}
 .section-head .cta-link{display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; color:var(--teal); white-space:nowrap}
 .section-head .cta-link svg{width:13px; height:13px}
 
 /* ---------- services grid ---------- */
-.grid-6{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-@media (max-width:900px){ .grid-6{grid-template-columns:1fr 1fr} }
+.grid-6{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
 @media (max-width:600px){ .grid-6{grid-template-columns:1fr} }
 .svc-card{background:var(--surface); border:1px solid var(--rule); border-radius:16px; padding:24px; box-shadow:var(--card-shadow); display:flex; flex-direction:column; gap:14px; transition:transform .15s ease, border-color .15s ease}
 .svc-card:hover{transform:translateY(-4px); border-color:var(--card-accent)}
 .svc-card .ico{width:48px; height:48px; border-radius:13px; display:grid; place-items:center; background:color-mix(in srgb, var(--card-accent) 16%, transparent); color:var(--card-accent)}
 .svc-card .ico svg{width:24px; height:24px}
-.svc-card .code{font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--card-accent); letter-spacing:.04em; font-weight:500}
+.svc-card .code{font-family:'JetBrains Mono'; font-size:11.5px; color:var(--card-accent); letter-spacing:.04em; font-weight:500}
 .svc-card h3{font-size:18.5px; margin-top:2px}
 .svc-card p{color:var(--ink-soft); font-size:14px; flex:1}
 .svc-card .more{display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--card-accent)}
 .svc-card .more svg{width:12px; height:12px}
-.svc-card.c1{--card-accent:var(--brass)}
+.svc-card.c1{--card-accent:var(--blue)}
 .svc-card.c2{--card-accent:var(--teal)}
-.svc-card.c3{--card-accent:var(--slate)}
-.svc-card.c4{--card-accent:var(--sage)}
-.svc-card.c5{--card-accent:var(--brass)}
-.svc-card.c6{--card-accent:var(--teal)}
+.svc-card.c3{--card-accent:var(--aqua)}
+.svc-card.c4{--card-accent:var(--blue)}
+
+/* ---------- service detail modal ---------- */
+#emx-02{--d-accent:var(--teal)}
+#emx-03{--d-accent:var(--aqua)}
+#emx-04{--d-accent:var(--blue)}
+.svc-modal{position:fixed; inset:0; margin:auto; width:min(640px,92vw); max-height:86vh; overflow:auto; border:1px solid color-mix(in srgb,var(--d-accent) 35%,var(--rule)); border-radius:18px; padding:28px 28px 24px; background:linear-gradient(150deg,var(--surface),color-mix(in srgb,var(--surface-2) 45%,var(--bg))); color:var(--ink); box-shadow:0 40px 90px -30px rgba(0,0,0,.9)}
+.svc-modal::backdrop{background:rgba(2,6,23,.74); backdrop-filter:blur(5px)}
+.svc-modal .modal-close{position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; border:1px solid var(--rule); background:color-mix(in srgb,var(--bg) 55%,transparent); color:var(--ink); font-size:18px; line-height:1; cursor:pointer}
+.svc-modal .modal-close:hover{border-color:var(--d-accent); color:var(--d-accent)}
+.svc-modal .code{font-family:'JetBrains Mono'; font-size:11.5px; color:var(--d-accent); letter-spacing:.05em}
+.svc-modal h3{font-size:22px; margin-top:8px; padding-right:34px}
+.svc-modal .lead{color:var(--ink-soft); font-size:14.5px; line-height:1.65; margin-top:10px}
+.svc-modal .detail-list{margin-top:4px}
+.svc-modal .detail-sub{margin-top:18px}
+.svc-modal .detail-cta{margin-top:20px}
+.detail-note{border-left:2px solid var(--d-accent); background:color-mix(in srgb,var(--d-accent) 8%,transparent); padding:9px 12px; border-radius:0 8px 8px 0; color:var(--ink); font-size:13px; line-height:1.5; margin-top:14px}
+.detail-fine{color:var(--ink-soft); font-size:11.5px; line-height:1.5; margin-top:9px}
+.detail-sub{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 10px}
+.detail-list{list-style:none; margin:0; padding:0; display:grid; gap:7px; align-content:start}
+.detail-list li{display:flex; gap:8px; align-items:flex-start; font-size:13px; line-height:1.45; color:var(--ink-soft)}
+.detail-list li::before{content:"✓"; color:var(--d-accent); font-weight:700}
+.detail-cta{margin-top:16px}
+
+/* ---------- flagship service flows ---------- */
+.primary-services{display:grid; grid-template-columns:1fr; gap:24px}
+.primary-card{--product-accent:var(--teal); background:linear-gradient(150deg,var(--surface),color-mix(in srgb,var(--surface-2) 55%,var(--bg))); border:1px solid color-mix(in srgb,var(--product-accent) 34%,var(--rule)); border-radius:20px; padding:clamp(22px,3vw,32px); box-shadow:var(--card-shadow); position:relative; overflow:hidden}
+.primary-card,#otras-soluciones{scroll-margin-top:24px}
+.primary-card.tracing{--product-accent:var(--blue)}
+.primary-card::before{content:""; position:absolute; width:300px; height:240px; right:-120px; top:-145px; background:radial-gradient(ellipse,color-mix(in srgb,var(--product-accent) 20%,transparent),transparent 70%); pointer-events:none}
+.product-kicker{font-family:'JetBrains Mono'; color:var(--product-accent); font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.primary-card h3{font-size:clamp(23px,2.6vw,30px); margin-top:10px}
+.product-description{color:var(--ink); font-size:16px; margin:9px 0 18px; max-width:60ch}
+.product-list{list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0; padding:0}
+@media(max-width:620px){.product-list{grid-template-columns:1fr}}
+.product-list li{display:flex; align-items:center; gap:10px; color:var(--ink-soft); font-size:15px; line-height:1.5; padding:12px 14px; border:1px solid var(--rule); border-radius:10px; background:color-mix(in srgb,var(--bg) 38%,transparent); text-align:justify}
+.product-list li:nth-child(1){--c:var(--teal)}
+.product-list li:nth-child(2){--c:var(--blue)}
+.product-list li:nth-child(3){--c:var(--aqua)}
+.product-list li:nth-child(4){--c:var(--teal)}
+.product-list li::before{content:"✓"; flex:none; display:grid; place-items:center; width:21px; height:21px; border-radius:50%; background:color-mix(in srgb,var(--c) 18%,transparent); color:var(--c); font-size:12px; font-weight:700}
+.flow-title{font-size:13.5px; color:var(--ink); margin:24px 0 12px; font-weight:700}
+.preventive-flow{display:grid; grid-template-columns:repeat(5,1fr); gap:7px; position:relative}
+.preventive-step{text-align:center; position:relative; z-index:1}
+.preventive-step:not(:last-child)::after{content:""; position:absolute; top:14px; left:calc(50% + 16px); width:calc(100% - 25px); border-top:1px solid color-mix(in srgb,var(--teal) 55%,transparent)}
+.step-dot{width:29px; height:29px; display:grid; place-items:center; margin:0 auto 8px; border:1px solid var(--teal); color:var(--teal); background:var(--bg); border-radius:50%; font:11px 'JetBrains Mono'}
+.preventive-step span:last-child{display:block; font-size:12.5px; line-height:1.45; color:var(--ink-soft)}
+.loop-note{margin-top:13px; color:var(--teal); font:11px 'JetBrains Mono'; text-align:center}
+.primary-card{text-align:left}
+.product-summary{color:var(--ink-soft); font-size:16.5px; line-height:1.7; margin:12px 0 16px; text-align:justify}
+.product-summary strong{color:var(--ink); font-weight:600}
+.audience{display:flex; gap:10px; align-items:flex-start; border:1px solid color-mix(in srgb,var(--teal) 32%,var(--rule)); border-left:3px solid var(--teal); background:linear-gradient(115deg,color-mix(in srgb,var(--teal) 14%,transparent),color-mix(in srgb,var(--blue) 9%,transparent)); padding:15px 18px; border-radius:12px; font-size:15.5px; line-height:1.6; color:var(--ink-soft); text-align:justify}
+.audience strong{color:var(--teal); font-weight:700}
+.saber-more{border:1px solid var(--rule); border-radius:12px; padding:0; margin-top:18px; background:color-mix(in srgb,var(--bg) 40%,transparent)}
+.saber-more summary{cursor:pointer; list-style:none; padding:12px 14px; font-size:13px; font-weight:600; color:var(--ink); display:flex; align-items:center; justify-content:space-between; gap:10px}
+.saber-more summary::-webkit-details-marker{display:none}
+.saber-more summary::after{content:"+"; color:var(--product-accent); font-size:17px; font-weight:400; line-height:1}
+.saber-more[open] summary::after{content:"–"}
+.saber-more .saber-body{padding:0 14px 14px; font-size:14.5px; line-height:1.6; color:var(--ink-soft); display:grid; gap:9px; text-align:justify}
+.saber-more ul{margin:0; padding-left:17px; display:grid; gap:6px}
+.scope-note{margin:0; padding:10px 12px; border-radius:9px; border:1px solid color-mix(in srgb,var(--teal) 32%,var(--rule)); background:color-mix(in srgb,var(--teal) 10%,transparent); color:var(--ink-soft)}
+.scope-note strong{color:var(--teal)}
+.primary-card.tracing .scope-note{border-color:color-mix(in srgb,var(--blue) 34%,var(--rule)); background:color-mix(in srgb,var(--blue) 10%,transparent)}
+.primary-card.tracing .scope-note strong{color:var(--blue)}
+.plan-box{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; border-top:1px solid var(--rule); margin-top:22px; padding-top:18px}
+.plan-box .plan-name{font-size:14px; font-weight:700; color:var(--ink)}
+.plan-box .plan-sub{display:block; font-size:11.5px; color:var(--ink-soft); font-weight:400; margin-top:2px}
+.plan-note{width:100%; margin:0; font-size:11.5px; color:var(--ink-soft)}
+.trace-steps{display:grid; gap:0; margin-top:22px}
+.trace-step{display:grid; grid-template-columns:34px 1fr; gap:12px; position:relative; padding-bottom:18px}
+.trace-step:not(:last-child)::before{content:""; position:absolute; left:14px; top:31px; bottom:0; border-left:1px solid color-mix(in srgb,var(--blue) 55%,transparent)}
+.trace-number{width:30px; height:30px; border:1px solid var(--blue); color:var(--blue); border-radius:8px; display:grid; place-items:center; font:11px 'JetBrains Mono'; background:var(--bg)}
+.trace-step strong{display:block; font-size:14.5px; color:var(--ink)}
+.trace-step p{font-size:13.5px; line-height:1.55; color:var(--ink-soft); margin:4px 0 0; text-align:justify}
+.flow-disclaimer{border-top:1px solid var(--rule); margin-top:4px; padding-top:12px; color:var(--ink-soft); font-size:12.5px; line-height:1.55; text-align:justify}
+
+/* ---------- forensic case map ---------- */
+.case-map{--pay:#FFC857; display:grid; grid-template-columns:1fr minmax(280px,540px) 1fr; column-gap:20px; justify-items:center; align-items:center; margin:12px 0 6px; padding:26px 18px 22px; border-radius:16px; border:1px solid var(--rule); background:radial-gradient(480px 200px at 50% -12%, color-mix(in srgb,var(--blue) 17%,transparent), transparent 72%), radial-gradient(420px 220px at 50% 112%, color-mix(in srgb,var(--teal) 10%,transparent), transparent 72%), color-mix(in srgb,var(--bg) 40%,transparent); position:relative}
+.case-legend{grid-column:1/-1; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; font-size:11.5px; color:var(--ink-soft); margin-bottom:12px}
+.case-legend span{display:inline-flex; align-items:center; gap:6px}
+.case-legend i{width:9px; height:9px; border-radius:50%; display:inline-block}
+.case-legend .dot-pay{background:var(--pay); box-shadow:0 0 8px color-mix(in srgb,var(--pay) 55%,transparent)}
+.case-node{grid-column:2; position:relative; z-index:1; width:100%; text-align:center; padding:13px 18px; border-radius:12px; border:1px solid color-mix(in srgb,var(--blue) 30%,var(--rule)); background:linear-gradient(160deg,color-mix(in srgb,var(--surface-2) 52%,transparent),color-mix(in srgb,var(--bg) 66%,transparent)); box-shadow:0 16px 32px -26px rgba(0,0,0,.9)}
+.case-node strong{display:block; font-size:14.5px; color:var(--ink)}
+.case-node span{display:block; margin-top:3px; font-size:13px; line-height:1.5; color:var(--ink-soft)}
+.case-node.decision{border-color:color-mix(in srgb,var(--teal) 48%,var(--rule)); background:linear-gradient(160deg,color-mix(in srgb,var(--teal) 13%,transparent),color-mix(in srgb,var(--blue) 9%,transparent)); box-shadow:0 18px 38px -26px rgba(0,225,240,.45), inset 0 0 0 1px color-mix(in srgb,var(--teal) 10%,transparent)}
+.case-node.final{border-color:color-mix(in srgb,var(--teal) 46%,var(--rule)); background:linear-gradient(160deg,color-mix(in srgb,var(--teal) 10%,transparent),color-mix(in srgb,var(--bg) 55%,transparent))}
+.case-node.pay{border-color:color-mix(in srgb,var(--pay) 36%,var(--rule))}
+.pay-tag{position:absolute; top:-10px; right:14px; background:var(--pay); color:#241a00; font:10px 'JetBrains Mono'; letter-spacing:.07em; text-transform:uppercase; padding:2px 9px; border-radius:999px}
+.case-arrow{grid-column:2; width:2px; height:28px; background:linear-gradient(color-mix(in srgb,var(--blue) 62%,transparent),color-mix(in srgb,var(--blue) 18%,transparent)); position:relative}
+.case-arrow::after{content:""; position:absolute; left:50%; bottom:0; width:7px; height:7px; border-right:1.5px solid var(--blue); border-bottom:1.5px solid var(--blue); transform:translate(-50%,2px) rotate(45deg)}
+.case-split{grid-column:2; display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; position:relative; padding-top:6px; z-index:1}
+.case-split::before{content:""; position:absolute; top:0; left:22%; right:22%; height:1px; background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--blue) 55%,transparent),transparent)}
+.case-choice{border:1px solid var(--rule); border-radius:10px; padding:10px 12px; font-size:12.5px; line-height:1.45; color:var(--ink-soft); background:color-mix(in srgb,var(--bg) 48%,transparent); text-align:center}
+.case-choice b{display:block; font:10.5px 'JetBrains Mono'; letter-spacing:.12em; text-transform:uppercase; margin-bottom:4px}
+.case-choice.no b{color:var(--ink-soft)}
+.case-choice.si{border-color:color-mix(in srgb,var(--blue) 44%,var(--rule)); background:color-mix(in srgb,var(--blue) 11%,transparent)}
+.case-choice.si b{color:var(--blue)}
+@media(max-width:760px){.case-map{grid-template-columns:1fr}.case-node,.case-arrow,.case-split{grid-column:1}}
+@media(max-width:520px){.case-split{grid-template-columns:1fr}}
+@media(max-width:520px){.preventive-flow{grid-template-columns:1fr; gap:11px}.preventive-step{display:grid; grid-template-columns:30px 1fr; align-items:center; text-align:left; gap:10px}.preventive-step:not(:last-child)::after{top:29px; left:14px; width:0; height:18px; border-top:0; border-left:1px solid color-mix(in srgb,var(--teal) 55%,transparent)}.step-dot{margin:0}.preventive-step span:last-child{font-size:12px}}
 
 /* ---------- watch block callout ---------- */
 .callout{background:linear-gradient(160deg, var(--surface), var(--surface-2)); border:1px solid var(--rule); border-radius:20px; padding:36px; box-shadow:var(--card-shadow); position:relative; overflow:hidden}
 .callout::before{content:""; position:absolute; inset:0; background:radial-gradient(500px 260px at 90% -10%, color-mix(in srgb, var(--teal) calc(var(--glow-a)*100%), transparent), transparent 70%); pointer-events:none}
-.callout .tag{font-family:'IBM Plex Mono'; font-size:12px; color:var(--teal); letter-spacing:.03em}
+.callout .tag{font-family:'JetBrains Mono'; font-size:12px; color:var(--teal); letter-spacing:.03em}
 .callout h3{font-size:26px; margin-top:10px}
 .callout p{color:var(--ink-soft); max-width:68ch; margin-top:14px; font-size:15px}
 .stat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px}
 @media (max-width:700px){ .stat-grid{grid-template-columns:1fr} }
 .stat{background:color-mix(in srgb, var(--bg) 40%, transparent); border:1px solid var(--rule); border-radius:13px; padding:18px}
-.stat .num{font-family:'Fraunces',serif; font-size:28px; color:var(--stat-accent, var(--teal))}
+.stat .num{font-family:'Montserrat',system-ui,sans-serif; font-size:28px; color:var(--stat-accent, var(--teal))}
 .stat .label{font-size:13px; color:var(--ink-soft); margin-top:4px}
 .stat:nth-child(1){--stat-accent:var(--teal)}
-.stat:nth-child(2){--stat-accent:var(--brass)}
-.stat:nth-child(3){--stat-accent:var(--slate)}
+.stat:nth-child(2){--stat-accent:var(--blue)}
+.stat:nth-child(3){--stat-accent:var(--lime)}
 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px}
 @media (max-width:620px){ .two-col{grid-template-columns:1fr} }
 .two-col .box{background:color-mix(in srgb, var(--bg) 40%, transparent); border:1px solid var(--rule); border-radius:13px; padding:18px}
-.two-col h4{font-family:'IBM Plex Sans'; font-size:14px; font-weight:700; margin-bottom:10px}
+.two-col h4{font-family:'Inter',system-ui,sans-serif; font-size:14px; font-weight:700; margin-bottom:10px}
 .two-col ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14px}
 .two-col li{margin-bottom:6px}
 
 /* ---------- trust / compliance ---------- */
 .frameworks{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
-.framework{display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono'; font-size:13px; color:var(--ink-soft); border:1px solid var(--rule); background:var(--surface); padding:10px 16px; border-radius:999px}
+.framework{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono'; font-size:13px; color:var(--ink-soft); border:1px solid var(--rule); background:var(--surface); padding:10px 16px; border-radius:999px}
 .framework svg{width:14px; height:14px; color:var(--teal)}
-.framework.hl{color:var(--brass); border-color:color-mix(in srgb, var(--brass) 50%, var(--rule)); background:color-mix(in srgb, var(--brass) 10%, var(--surface))}
-.framework.hl svg{color:var(--brass)}
+.framework.hl{color:var(--blue); border-color:color-mix(in srgb, var(--blue) 50%, var(--rule)); background:color-mix(in srgb, var(--blue) 10%, var(--surface))}
+.framework.hl svg{color:var(--blue)}
+.knowledge-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
+@media(max-width:820px){.knowledge-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.knowledge-grid{grid-template-columns:1fr}}
+.knowledge-card{scroll-margin-top:24px; min-height:190px; padding:24px; border:1px solid var(--rule); border-radius:16px; background:linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface-2) 40%,var(--bg)));}
+.knowledge-card .code{font:11px 'JetBrains Mono'; color:var(--teal); letter-spacing:.08em; text-transform:uppercase}
+.knowledge-card h3{font-size:19px; margin-top:12px}
+.knowledge-card p{font-size:14px; color:var(--ink-soft); margin:10px 0 0}
 
 /* ---------- contact / footer ---------- */
 footer{border-top:1px solid var(--rule); padding-block:40px 48px; margin-top:20px}
-.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px}
-@media (max-width:620px){ .contact-grid{grid-template-columns:1fr} }
-.contact-grid h4{font-size:14px; font-weight:700; margin-bottom:10px; font-family:'IBM Plex Sans'}
+.contact-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:36px; align-items:start}
+@media (max-width:760px){ .contact-grid{grid-template-columns:1fr} }
+.contact-grid h4{font-size:14px; font-weight:700; margin-bottom:10px; font-family:'Inter',system-ui,sans-serif}
 .copyline{font-size:14px; color:var(--ink-soft)}
-.copy-btn{font-family:'IBM Plex Mono'; font-size:13.5px; background:var(--surface); border:1px solid var(--rule); padding:8px 14px; border-radius:999px; color:var(--ink); cursor:pointer}
-.copy-btn:hover{border-color:var(--teal); color:var(--teal)}
-.social-row{display:flex; gap:10px; margin-top:12px}
-.social-row .icon-btn{opacity:.55}
+.contact-methods{display:grid; gap:12px; margin-top:20px}
+.contact-method{display:flex; align-items:center; gap:12px; border:1px solid var(--rule); background:var(--surface); border-radius:12px; padding:13px 15px; color:var(--ink); font-size:14px}
+.contact-method:hover{border-color:var(--teal); color:var(--teal)}
+.contact-form{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.contact-form label{display:grid; gap:6px; color:var(--ink-soft); font-size:12px}
+.contact-form label.full{grid-column:1/-1}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%; border:1px solid var(--rule); border-radius:9px; background:var(--surface); color:var(--ink); padding:11px 12px; font:14px 'Inter',system-ui,sans-serif}
+.contact-form textarea{min-height:112px; resize:vertical}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--teal); outline-offset:1px}
+.contact-form .submit{justify-self:start; cursor:pointer}
+.form-note{grid-column:1/-1; color:var(--ink-soft); font-size:11.5px; margin:0}
+@media(max-width:520px){.contact-form{grid-template-columns:1fr}.contact-form label.full,.form-note{grid-column:auto}}
 .foot-bottom{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:34px; padding-top:22px; border-top:1px solid var(--rule); font-size:13px; color:var(--mono)}
+.foot-brand{display:inline-flex; align-items:center; gap:8px}
+.foot-brand img{display:block; flex:none}
+.foot-lockup{width:150px; height:auto; opacity:.92; filter:drop-shadow(0 3px 12px rgba(0,174,255,.10))}
 </style>
 
 
@@ -210,265 +311,400 @@ footer{border-top:1px solid var(--rule); padding-block:40px 48px; margin-top:20p
   <header>
     <div class="nav">
       <div class="brand">
-        <svg class="seal" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="var(--teal)" stroke-width="1.4"/>
-          <circle cx="20" cy="20" r="13.5" fill="none" stroke="var(--brass)" stroke-width="0.8" opacity=".7"/>
-          <line x1="11" y1="14" x2="25" y2="14" stroke="var(--brass)" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="11" y1="20" x2="21" y2="20" stroke="var(--brass)" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="11" y1="26" x2="17" y2="26" stroke="var(--brass)" stroke-width="1.8" stroke-linecap="round"/>
-          <circle cx="27" cy="26" r="2.1" fill="var(--teal)"/>
-        </svg>
-        <div class="brand-text">
-          <div class="wordmark">EMPOR<em>I</em>NEX</div>
-          <div class="tagline">Finanzas Digitales &amp; Inteligencia</div>
-        </div>
+        <img class="brand-lockup" src="emporinex-lockup-v2.png" width="320" height="77" alt="EMPORINEX &middot; Digital Finance &amp; Intelligence">
       </div>
       <nav class="links">
         <a href="#inicio">Inicio</a>
         <div class="has-drop" tabindex="0">
           <button type="button">Servicios <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="dropdown">
-            <a href="#servicios">Compra y venta de criptoactivos</a>
-            <a href="#servicios">Asesores cripto con IA</a>
-            <a href="#servicios">IA a la medida</a>
-            <a href="#servicios">Cumplimiento contable</a>
+            <a href="#preventive-block">Preventive Block</a>
+            <a href="#forensic-wallet-tracing">Forensic Wallet Tracing</a>
+            <a href="#otras-soluciones">Otras soluciones</a>
           </div>
         </div>
-        <a href="#watchblock">Watch Block</a>
+        <a href="#nosotros">Quiénes somos</a>
         <div class="has-drop" tabindex="0">
           <button type="button">Conocimiento <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button>
           <div class="dropdown">
-            <a href="#compliance">Marcos de cumplimiento</a>
-            <a href="#servicios">Conferencias y capacitaciones</a>
+            <a href="#conocimiento-guias">Guías de seguridad</a>
+            <a href="#conocimiento-trazabilidad">Activos digitales y trazabilidad</a>
+            <a href="#conocimiento-capacitaciones">Capacitaciones</a>
           </div>
         </div>
         <a href="#contacto">Contacto</a>
       </nav>
-      <div class="nav-actions">
-        <a class="btn primary" href="#contacto">Consultorías
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
     </div>
   </header>
 
   <section class="hero" id="inicio">
-    <div class="candles" aria-hidden="true">
-      <svg viewBox="0 0 400 320" preserveAspectRatio="none">
-        <g stroke-width="2">
-          <line x1="20" y1="60" x2="20" y2="180" stroke="var(--teal)"/>
-          <rect x="12" y="90" width="16" height="60" fill="var(--teal)"/>
-          <line x1="60" y1="100" x2="60" y2="220" stroke="var(--slate)"/>
-          <rect x="52" y="130" width="16" height="50" fill="var(--slate)"/>
-          <line x1="100" y1="40" x2="100" y2="160" stroke="var(--brass)"/>
-          <rect x="92" y="70" width="16" height="55" fill="var(--brass)"/>
-        </g>
-      </svg>
-    </div>
     <div>
       <div class="hero-badge eyebrow"><span class="rule"></span>Innovación &middot; Confianza &middot; Crecimiento<span class="rule"></span></div>
-      <h1>Un <span class="hl">emporio</span> de servicios cripto, con el rigor de una casa de cambio.</h1>
-      <p class="lede">Emporinex conecta activos virtuales, inteligencia artificial y cumplimiento normativo en un mismo lugar, para personas y empresas que operan en el ecosistema blockchain de América Latina.</p>
+      <h1><span class="line">Conectamos tecnología,</span> <span class="line hl">finanzas e inteligencia</span> <span class="line">para un mundo digital.</span></h1>
+      <p class="lede">Soluciones integrales en activos digitales, análisis blockchain y desarrollo tecnológico para aprovechar las oportunidades de la economía del futuro.</p>
       <div class="cta-row">
         <a class="btn primary" href="#servicios">Explorar soluciones
           <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn ghost" href="#watchblock">Conocer Watch Block</a>
+        <a class="btn ghost" href="#nosotros">Conocer Emporinex</a>
       </div>
     </div>
 
     <div class="globe-wrap" aria-hidden="true">
-      <svg viewBox="0 0 320 300">
+      <div class="globe-candles">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="xMidYMid slice">
+          <g stroke-linecap="round">
+            <g stroke="#36E8D1" fill="#36E8D1" opacity=".55">
+              <line x1="34" y1="150" x2="34" y2="286" stroke-width="2"/><rect x="28" y="186" width="12" height="66" rx="1"/>
+              <line x1="84" y1="118" x2="84" y2="252" stroke-width="2"/><rect x="78" y="150" width="12" height="58" rx="1"/>
+              <line x1="134" y1="168" x2="134" y2="312" stroke-width="2"/><rect x="128" y="198" width="12" height="74" rx="1"/>
+            </g>
+            <g stroke="#7FB2FF" fill="#7FB2FF" opacity=".5">
+              <line x1="59" y1="176" x2="59" y2="300" stroke-width="2"/><rect x="53" y="206" width="12" height="52" rx="1"/>
+              <line x1="109" y1="138" x2="109" y2="268" stroke-width="2"/><rect x="103" y="170" width="12" height="60" rx="1"/>
+              <line x1="159" y1="196" x2="159" y2="330" stroke-width="2"/><rect x="153" y="224" width="12" height="64" rx="1"/>
+            </g>
+            <g stroke="#38CFFF" fill="#38CFFF" opacity=".42">
+              <line x1="406" y1="140" x2="406" y2="276" stroke-width="2"/><rect x="400" y="172" width="12" height="60" rx="1"/>
+              <line x1="456" y1="168" x2="456" y2="304" stroke-width="2"/><rect x="450" y="200" width="12" height="58" rx="1"/>
+              <line x1="506" y1="112" x2="506" y2="248" stroke-width="2"/><rect x="500" y="146" width="12" height="56" rx="1"/>
+            </g>
+            <g stroke="#36E8D1" fill="#36E8D1" opacity=".5">
+              <line x1="431" y1="120" x2="431" y2="252" stroke-width="2"/><rect x="425" y="150" width="12" height="62" rx="1"/>
+              <line x1="481" y1="190" x2="481" y2="322" stroke-width="2"/><rect x="475" y="220" width="12" height="68" rx="1"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <img class="globe-image" src="globe-emporinex.webp" width="1200" height="1200" alt="" decoding="async">
+
+      <svg class="globe-orbit" viewBox="0 0 400 400">
         <defs>
-          <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="var(--teal)" stop-opacity=".35"/>
-            <stop offset="100%" stop-color="var(--teal)" stop-opacity="0"/>
-          </radialGradient>
+          <linearGradient id="orbitGrad" x1="0" y1="200" x2="400" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#36E8D1" stop-opacity="0"/>
+            <stop offset=".25" stop-color="#36E8D1" stop-opacity=".9"/>
+            <stop offset=".55" stop-color="#7FB2FF" stop-opacity=".9"/>
+            <stop offset=".82" stop-color="#38CFFF" stop-opacity=".8"/>
+            <stop offset="1" stop-color="#38CFFF" stop-opacity="0"/>
+          </linearGradient>
         </defs>
-        <circle class="globe-core" cx="160" cy="150" r="130"/>
-        <circle cx="160" cy="150" r="96" fill="none" stroke="var(--rule)" stroke-width="1"/>
-        <g stroke="var(--rule)" stroke-width="1" fill="none">
-          <ellipse cx="160" cy="150" rx="96" ry="30"/>
-          <ellipse cx="160" cy="150" rx="96" ry="60"/>
-          <ellipse cx="160" cy="150" rx="55" ry="96"/>
-          <ellipse cx="160" cy="150" rx="25" ry="96"/>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="var(--rule)" stroke-width="1" opacity=".6"/>
+        <g class="ring ring--fast">
+          <ellipse cx="200" cy="200" rx="178" ry="60" fill="none" stroke="url(#orbitGrad)" stroke-width="1.8"/>
+          <circle cx="378" cy="200" r="7" fill="#00E1F0" opacity=".18"/><circle cx="378" cy="200" r="3.6" fill="#00E1F0"/>
         </g>
-        <g class="globe-ring">
-          <ellipse cx="160" cy="150" rx="140" ry="42" fill="none" stroke="var(--teal)" stroke-width="1.4" opacity=".55"/>
-          <circle cx="300" cy="150" r="3.4" fill="var(--teal)"/>
+        <g transform="rotate(58 200 200)">
+          <g class="ring ring--slow">
+            <ellipse cx="200" cy="200" rx="174" ry="46" fill="none" stroke="#168BFF" stroke-opacity=".68" stroke-width="1.25"/>
+            <circle cx="374" cy="200" r="6" fill="#168BFF" opacity=".2"/><circle cx="374" cy="200" r="2.8" fill="#8EC9FF"/>
+          </g>
         </g>
-        <g class="globe-line">
-          <line x1="90" y1="95" x2="210" y2="130"/>
-          <line x1="210" y1="130" x2="245" y2="200"/>
-          <line x1="90" y1="95" x2="120" y2="205"/>
-          <line x1="120" y1="205" x2="245" y2="200"/>
-          <line x1="210" y1="130" x2="120" y2="205"/>
+        <g transform="rotate(-54 200 200)">
+          <g class="ring">
+            <ellipse cx="200" cy="200" rx="186" ry="39" fill="none" stroke="#00E1F0" stroke-opacity=".5" stroke-width="1.1"/>
+            <circle cx="386" cy="200" r="5.5" fill="#00E1F0" opacity=".2"/><circle cx="386" cy="200" r="2.4" fill="#B8FDFF"/>
+          </g>
         </g>
-        <circle class="globe-dot pulse" cx="90" cy="95" r="3"/>
-        <circle class="globe-dot b pulse d2" cx="210" cy="130" r="3.4"/>
-        <circle class="globe-dot s pulse d3" cx="245" cy="200" r="3"/>
-        <circle class="globe-dot pulse d2" cx="120" cy="205" r="2.8"/>
-        <circle class="globe-dot b pulse" cx="160" cy="150" r="3.8"/>
       </svg>
     </div>
 
     <div class="feature-strip" style="grid-column:1/-1">
-      <div class="feature-card">
-        <div class="ico teal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l6-6 4 4 7-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><div class="ttl">Finanzas Digitales</div><div class="sub">Compra, venta y más</div></div>
-      </div>
-      <div class="feature-card">
-        <div class="ico brass"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
-        <div><div class="ttl">Inteligencia Blockchain</div><div class="sub">Análisis y cumplimiento</div></div>
-      </div>
-      <div class="feature-card">
-        <div class="ico slate"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-        <div><div class="ttl">Inteligencia Artificial</div><div class="sub">Automatización y datos</div></div>
-      </div>
-      <div class="feature-card">
-        <div class="ico sage"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><div class="ttl">Soluciones Tecnológicas</div><div class="sub">Desarrollo y asesoría</div></div>
-      </div>
+      <a class="feature-card" href="#preventive-block">
+        <div class="ico teal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div><div class="ttl">Preventive Block</div><div class="sub">Monitoreo preventivo de billeteras</div></div><span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="feature-card" href="#forensic-wallet-tracing">
+        <div class="ico blue"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L21 21M8 10.5h5M10.5 8v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div><div class="ttl">Forensic Wallet Tracing</div><div class="sub">Investigación forense y rastreo</div></div><span class="arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 
   <section id="servicios">
     <div class="section-head">
       <div>
-        <div class="eyebrow"><span class="rule"></span>Nuestros servicios</div>
-        <h2>Soluciones a tu medida en el ecosistema digital</h2>
-        <p>Desde la compra y venta de criptoactivos hasta el análisis forense y la consultoría especializada, te acompañamos en cada paso.</p>
+        <div class="eyebrow"><span class="rule"></span>Servicios principales</div>
+        <h2>Prevención y análisis forense de billeteras cripto</h2>
+        <p>Dos formas de acompañarte: monitorear señales de riesgo de manera continua o investigar un caso específico.</p>
       </div>
-      <a class="cta-link" href="#watchblock">Ver todos los servicios
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+    </div>
+
+    <div class="primary-services">
+      <article class="primary-card" id="preventive-block">
+        <div class="product-kicker">Plan Premium · membresía</div>
+        <h3>Preventive Block</h3>
+        <p class="product-description">Monitoreo preventivo de riesgos de bloqueo en billeteras cripto.</p>
+        <p class="product-summary">Muchos bloqueos ocurren por operaciones que, sin saberlo, tuvieron contacto con direcciones vinculadas a fraude o a listas de riesgo. <strong>Preventive Block observa de forma continua las operaciones de tus billeteras</strong> para detectar señales tempranas y avisarte con contexto y recomendaciones, antes de que el riesgo se convierta en un problema.</p>
+        <div class="audience"><span><strong>¿Para quién es?</strong> Personas y empresas que operan con criptoactivos, quieren anticiparse a un bloqueo y necesitan acompañamiento periódico sobre el riesgo de sus operaciones.</span></div>
+        <div class="flow-title">Qué incluye</div>
+        <ul class="product-list">
+          <li>Observación y análisis de las operaciones.</li>
+          <li>Aviso oportuno ante señales de riesgo, con contexto y recomendaciones.</li>
+          <li>Seguimiento personalizado e informe semanal de riesgo AML.</li>
+          <li>Recomendaciones de buenas prácticas para el cliente.</li>
+        </ul>
+        <div class="flow-title">Un ciclo continuo de prevención</div>
+        <div class="preventive-flow" aria-label="Flujo de Preventive Block">
+          <div class="preventive-step"><span class="step-dot">01</span><span>Registro de billeteras para observación</span></div>
+          <div class="preventive-step"><span class="step-dot">02</span><span>Monitoreo y rastreo de operaciones</span></div>
+          <div class="preventive-step"><span class="step-dot">03</span><span>Identificación de señales de riesgo</span></div>
+          <div class="preventive-step"><span class="step-dot">04</span><span>Aviso inmediato y recomendaciones</span></div>
+          <div class="preventive-step"><span class="step-dot">05</span><span>Seguimiento e informe semanal</span></div>
+        </div>
+        <div class="loop-note">↻ El monitoreo continúa mientras la membresía esté activa</div>
+
+        <details class="saber-more">
+          <summary>Saber más sobre el servicio</summary>
+          <div class="saber-body">
+            <p class="scope-note"><strong>Cobertura:</strong> el servicio cubre 2 billeteras por cliente.</p>
+            <p>El servicio se basa en la observación de direcciones públicas y sus operaciones. No accedemos a tus claves, no movemos fondos y no controlamos tus billeteras.</p>
+            <ul>
+              <li>Detectar señales de riesgo no garantiza que se evite un bloqueo ni que se revierta uno ya existente.</li>
+              <li>El informe semanal resume el riesgo AML de las operaciones observadas.</li>
+              <li>Las alertas se entregan por el canal acordado con el cliente al activar la membresía.</li>
+              <li>La información se usa únicamente para el monitoreo contratado.</li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="plan-box">
+          <div class="plan-name">Plan Premium<span class="plan-sub">Membresía con monitoreo continuo y acompañamiento</span></div>
+          <a class="btn primary" href="#contacto">Solicitar membresía
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="plan-note">El valor de la membresía se define con un asesor, que confirma el plan, las condiciones y los datos de pago. Recibimos pagos en <strong>USDT por red Tron (TRC-20)</strong> y otros medios acordados.</p>
+        </div>
+      </article>
+
+      <article class="primary-card tracing" id="forensic-wallet-tracing">
+        <div class="product-kicker">Investigación por caso · etapas independientes</div>
+        <h3>Forensic Wallet Tracing</h3>
+        <p class="product-description">Investigación forense y rastreo de billeteras cripto ante bloqueos, fraude o robo.</p>
+        <p class="product-summary">Cuando una cuenta o billetera ya está bloqueada, o cuando hubo fraude o robo de activos, el punto de partida es entender qué pasó. <strong>Forensic Wallet Tracing rastrea las operaciones y estudia el origen del caso</strong> para identificar la causa probable y determinar qué alternativas existen, con claridad sobre cada etapa antes de avanzar.</p>
+        <div class="audience"><span><strong>¿Para quién es?</strong> Personas y empresas con una cuenta o billetera bloqueada, víctimas de fraude o robo de activos digitales, o quienes necesitan reconstruir el historial de una operación.</span></div>
+        <div class="flow-title">Etapas del servicio</div>
+        <div class="trace-steps" aria-label="Etapas de Forensic Wallet Tracing">
+          <div class="trace-step"><span class="trace-number">01</span><div><strong>Preanálisis</strong><p>Revisión inicial del caso, identificación de posibles causas y valoración de viabilidad.</p></div></div>
+          <div class="trace-step"><span class="trace-number">02</span><div><strong>Análisis forense</strong><p>Rastreo más detallado de las operaciones y preparación de hallazgos.</p></div></div>
+          <div class="trace-step"><span class="trace-number">03</span><div><strong>Solicitud y acompañamiento</strong><p>Gestión de una solicitud cuando los hallazgos indiquen que puede proceder.</p></div></div>
+        </div>
+
+        <details class="saber-more">
+          <summary>Saber más: flujo completo del caso</summary>
+          <div class="saber-body">
+            <p>Las etapas marcadas como <strong>Pago 1, 2 y 3</strong> se contratan y pagan por separado. Así avanzas con información antes de asumir el siguiente costo.</p>
+            <div class="case-map" aria-label="Flujo completo de Forensic Wallet Tracing">
+              <div class="case-legend"><span><i class="dot-pay"></i>Etapa con costo propio</span><span>El contacto inicial no tiene costo</span></div>
+              <div class="case-node"><strong>Contacto y recepción del caso</strong><span>Conocemos la situación: tipo de bloqueo, fraude o robo, y los datos disponibles.</span></div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node pay"><span class="pay-tag">Pago 1</span><strong>Preanálisis</strong><span>Revisión inicial, causa probable y viabilidad del caso.</span></div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node decision"><strong>¿El caso es viable y quieres profundizar?</strong><span>La decisión es tuya; no estás obligado a continuar.</span></div>
+              <div class="case-split">
+                <div class="case-choice no"><b>No</b>Cierre del preanálisis con los hallazgos iniciales.</div>
+                <div class="case-choice si"><b>Sí</b>Continúa al análisis forense.</div>
+              </div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node pay"><span class="pay-tag">Pago 2</span><strong>Análisis forense</strong><span>Rastreo detallado de las operaciones y preparación de hallazgos.</span></div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node decision"><strong>¿Tiene sentido gestionar una solicitud?</strong><span>Depende de lo que revele el análisis y de la factibilidad del caso.</span></div>
+              <div class="case-split">
+                <div class="case-choice no"><b>No</b>Entrega de hallazgos y cierre del análisis.</div>
+                <div class="case-choice si"><b>Sí</b>Continúa a solicitud y acompañamiento.</div>
+              </div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node pay"><span class="pay-tag">Pago 3</span><strong>Solicitud y acompañamiento</strong><span>Gestión de la solicitud y seguimiento del caso según factibilidad.</span></div>
+              <div class="case-arrow" aria-hidden="true"></div>
+              <div class="case-node final"><strong>Seguimiento y cierre</strong><span>Entrega final y cierre del caso.</span></div>
+            </div>
+            <p class="scope-note"><strong>Importante:</strong> el análisis no garantiza el desbloqueo ni la recuperación de activos. La viabilidad depende de los resultados de cada caso.</p>
+          </div>
+        </details>
+
+        <div class="plan-box">
+          <div class="plan-name">Cotización por etapa<span class="plan-sub">Preanálisis, análisis forense y solicitud se cotizan por separado</span></div>
+          <a class="btn primary" href="#contacto">Evaluar mi caso
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="plan-note">El costo de cada etapa lo define un asesor según el caso. Recibimos pagos en <strong>USDT por red Tron (TRC-20)</strong> y otros medios acordados.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="section-head" id="otras-soluciones" style="margin-top:64px">
+      <div>
+        <div class="eyebrow"><span class="rule"></span>Otras soluciones de Emporinex</div>
+        <h2>Servicios para personas y empresas</h2>
+      </div>
     </div>
 
     <div class="grid-6">
       <div class="svc-card c1">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-2.1 2.5-2.1s2.5.8 2.5 1.9c0 2.6-5 1.4-5 4 0 1.1 1.1 1.9 2.5 1.9s2.5-.8 2.5-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <div class="code">EMX&middot;01&middot;AV</div>
-        <h3>Compra y venta de activos virtuales</h3>
-        <p>Intermediación en la adquisición y liquidación de criptoactivos para personas naturales y empresas, con tarifas ajustadas al mercado latinoamericano.</p>
-        <span class="more">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="code">DIGITAL ASSET OPERATIONS</div>
+        <h3>OTC Trading &amp; Global Digital Asset Solutions</h3>
+        <p>Compra y venta de activos digitales, mesa OTC para operaciones de alto volumen y soluciones internacionales de pagos y liquidación. Atención para clientes individuales y empresariales.</p>
+        <a class="more" href="otc-trading.html">Ver servicio <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
       <div class="svc-card c2">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/><path d="M8 15c1 1 2.2 1.5 4 1.5s3-.5 4-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <div class="code">EMX&middot;02&middot;IA</div>
-        <h3>Asesores cripto con IA</h3>
-        <p>Acompañamiento continuo apoyado en inteligencia artificial para decisiones de portafolio, gestión de riesgo y seguimiento de posiciones.</p>
-        <span class="more">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Asesoría Inteligente en Criptoactivos</h3>
+        <p>Asesoría apoyada en inteligencia artificial para analizar el mercado, identificar oportunidades y evaluar riesgos.</p>
+        <a class="more" href="#emx-02" data-modal="emx-02">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
       <div class="svc-card c3">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.6"/></svg></div>
         <div class="code">EMX&middot;03&middot;SW</div>
-        <h3>Implementación de IA a la medida</h3>
-        <p>Desarrollo de software propio que integra inteligencia artificial con sistemas cripto existentes, adaptado a la operación de cada cliente.</p>
-        <span class="more">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Soluciones de IA a la Medida</h3>
+        <p>Diseñamos e implementamos agentes inteligentes, automatizaciones e integraciones de IA adaptadas a cada empresa.</p>
+        <a class="more" href="#emx-03" data-modal="emx-03">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
       <div class="svc-card c4">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="code">EMX&middot;04&middot;CP</div>
-        <h3>Agente de cumplimiento contable cripto</h3>
-        <p>Trámite y acompañamiento contable especializado en operaciones con criptoactivos, alineado con las obligaciones normativas vigentes.</p>
-        <span class="more">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Gestión Contable de Criptoactivos</h3>
+        <p>Organización y clasificación de operaciones con criptoactivos, con reportes y soportes para facilitar la gestión contable.</p>
+        <a class="more" href="#emx-04" data-modal="emx-04">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
-      <div class="svc-card c5">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-        <div class="code">EMX&middot;05&middot;FX</div>
-        <h3>Investigación cripto forense</h3>
-        <p>Análisis forense on-chain ante fraude, bloqueo o robo de activos digitales. Esta línea se presta a través de Watch Block Forensic Intelligence.</p>
-        <span class="more">Ver detalle <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-
-      <div class="svc-card c6">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 11v4c0 1.5 2.2 2.5 5 2.5s5-1 5-2.5v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-        <div class="code">EMX&middot;06&middot;ED</div>
-        <h3>Conferencias y capacitaciones</h3>
-        <p>Formación sobre el ecosistema blockchain y cripto, diseñada para equipos, aliados y audiencias que necesitan entender el sector.</p>
-        <span class="more">Saber más <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
     </div>
+
   </section>
 
-  <section id="watchblock">
+  <section id="nosotros">
     <div class="section-head">
       <div>
-        <div class="eyebrow"><span class="rule"></span>Firma aliada</div>
-        <h2>Watch Block Forensic Intelligence</h2>
-      </div>
-      <span class="framework hl"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>ABBI&middot;000023</span>
-    </div>
-    <div class="callout">
-      <div class="tag">Análisis forense blockchain</div>
-      <h3>Trazabilidad on-chain con marco regulatorio internacional</h3>
-      <p>Firma colombiana con sede en Cali especializada en análisis forense blockchain, investigación de activos digitales y cumplimiento cripto para el mercado latinoamericano. Combina metodología técnica de trazabilidad on-chain con marcos regulatorios internacionales (FATF, OFAC, UIAF) para apoyar a personas naturales, empresas, firmas de abogados y autoridades. Todos los servicios se prestan de forma virtual; si se requiere presencia física, los viáticos corren por cuenta del cliente.</p>
-
-      <div class="stat-grid">
-        <div class="stat"><div class="num">7+ capas</div><div class="label">Trazabilidad backward / forward en cualquier red blockchain</div></div>
-        <div class="stat"><div class="num">60%</div><div class="label">Tarifas por debajo de firmas internacionales, en USD ajustado a LATAM</div></div>
-        <div class="stat"><div class="num">Propio</div><div class="label">Grafo interactivo de trazabilidad, sin licencias de terceros</div></div>
-      </div>
-
-      <div class="two-col">
-        <div class="box">
-          <h4>Membresía premium</h4>
-          <ul>
-            <li>Aviso en tiempo real de billetera en riesgo de bloqueo</li>
-            <li>Informe semanal de riesgo AML de las transacciones</li>
-            <li>Recomendaciones de buenas prácticas</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h4>Desbloqueo de cuentas</h4>
-          <ul>
-            <li>Preanálisis de la cuenta afectada</li>
-            <li>Análisis forense de la causa raíz</li>
-            <li>Solicitud de desbloqueo según factibilidad</li>
-          </ul>
-        </div>
+        <div class="eyebrow"><span class="rule"></span>Nosotros</div>
+        <h2>Finanzas digitales, análisis y tecnología con acompañamiento cercano</h2>
+        <p>Emporinex es una marca operada por SERVIGLOBAL DE COLOMBIA S.A.S. Operamos desde Colombia y ofrecemos servicios de pagos a distintos países. Acompañamos a personas y empresas en el ecosistema de activos digitales con monitoreo preventivo y análisis forense de billeteras, además de soluciones en activos virtuales, inteligencia artificial y trámites contables cripto. Nuestra diferencia está en el acompañamiento cercano y el seguimiento continuo, con enfoque preventivo cuando el servicio lo requiere.</p>
       </div>
     </div>
   </section>
 
-  <section id="compliance">
+  <section id="conocimiento">
     <div class="section-head">
       <div>
-        <div class="eyebrow"><span class="rule"></span>Cumplimiento</div>
-        <h2>Marcos regulatorios reconocidos</h2>
-        <p>La investigación forense opera bajo marcos regulatorios reconocidos internacionalmente y con membresía certificada en la industria de inteligencia blockchain.</p>
+        <div class="eyebrow"><span class="rule"></span>Conocimiento</div>
+        <h2>Aprende sobre el ecosistema digital</h2>
+        <p>Recursos para comprender mejor la seguridad de las billeteras, los activos digitales y las herramientas que forman parte de esta economía.</p>
       </div>
     </div>
-    <div class="frameworks">
-      <span class="framework"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>FATF</span>
-      <span class="framework"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>OFAC</span>
-      <span class="framework"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>UIAF</span>
-      <span class="framework hl"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>ABBI &middot; miembro certificado</span>
+    <div class="knowledge-grid">
+      <article class="knowledge-card" id="conocimiento-guias">
+        <div class="code">01 · Guías prácticas</div>
+        <h3>Seguridad de billeteras</h3>
+        <p>Buenas prácticas, señales de riesgo y recomendaciones para entender mejor la seguridad de tus billeteras digitales.</p>
+      </article>
+      <article class="knowledge-card" id="conocimiento-trazabilidad">
+        <div class="code">02 · Artículos</div>
+        <h3>Activos digitales y trazabilidad</h3>
+        <p>Conceptos de blockchain, operaciones cripto y análisis de los movimientos registrados en una red.</p>
+      </article>
+      <article class="knowledge-card" id="conocimiento-capacitaciones">
+        <div class="code">03 · Formación</div>
+        <h3>Capacitaciones</h3>
+        <p>Temas de activos digitales, blockchain y prevención de riesgos para personas y equipos de empresas.</p>
+      </article>
     </div>
   </section>
 
+  <dialog class="svc-modal" id="emx-02" aria-labelledby="emx-02-title">
+    <button class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+    <div class="code">EMX&middot;02&middot;IA</div>
+    <h3 id="emx-02-title">Asesoría Inteligente en Criptoactivos</h3>
+    <p class="lead">Asesoría apoyada en inteligencia artificial para analizar el mercado de criptoactivos, identificar oportunidades, monitorear tendencias y evaluar riesgos. Herramientas inteligentes para apoyar decisiones, seguir portafolios y entender el comportamiento del mercado.</p>
+    <p class="detail-note">Inteligencia aplicada al mercado cripto para tomar decisiones con mayor información y perspectiva.</p>
+    <p class="detail-fine">Las recomendaciones son apoyo informativo. No constituyen asesoría financiera ni garantizan rentabilidad o resultados de inversión.</p>
+    <h4 class="detail-sub">Funcionalidades</h4>
+    <ul class="detail-list">
+      <li>Análisis de mercado y criptomonedas.</li>
+      <li>Identificación de oportunidades y tendencias.</li>
+      <li>Seguimiento y análisis de portafolios.</li>
+      <li>Alertas y evaluación de riesgos.</li>
+      <li>Recomendaciones de compra y venta como apoyo a la decisión del usuario.</li>
+      <li>Monitoreo de activos digitales y condiciones del mercado.</li>
+    </ul>
+    <div class="detail-cta"><a class="btn primary" href="#contacto">Consultar servicio</a></div>
+  </dialog>
+
+  <dialog class="svc-modal" id="emx-03" aria-labelledby="emx-03-title">
+    <button class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+    <div class="code">EMX&middot;03&middot;SW</div>
+    <h3 id="emx-03-title">Soluciones de IA a la Medida</h3>
+    <p class="lead">Diseñamos e implementamos soluciones de inteligencia artificial adaptadas a las necesidades de cada empresa. Desarrollamos agentes inteligentes, automatizaciones e integraciones tecnológicas para optimizar procesos, conectar sistemas y mejorar la eficiencia operativa.</p>
+    <p class="detail-note">Transformamos procesos empresariales mediante soluciones inteligentes diseñadas para cada necesidad.</p>
+    <h4 class="detail-sub">Funcionalidades</h4>
+    <ul class="detail-list">
+      <li>Desarrollo de agentes inteligentes personalizados.</li>
+      <li>Automatización de procesos empresariales.</li>
+      <li>Integración de IA con APIs y plataformas externas.</li>
+      <li>Creación de asistentes virtuales empresariales.</li>
+      <li>Integración con sistemas y herramientas existentes.</li>
+      <li>Soluciones adaptadas a cada sector y operación.</li>
+    </ul>
+    <div class="detail-cta"><a class="btn primary" href="#contacto">Solicitar información</a></div>
+  </dialog>
+
+  <dialog class="svc-modal" id="emx-04" aria-labelledby="emx-04-title">
+    <button class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+    <div class="code">EMX&middot;04&middot;CP</div>
+    <h3 id="emx-04-title">Gestión Contable de Criptoactivos</h3>
+    <p class="lead">Facilitamos la organización y gestión de información relacionada con operaciones de criptoactivos mediante herramientas de automatización e inteligencia artificial. Ayudamos a estructurar movimientos, clasificar transacciones, consolidar información y preparar soportes documentales para su revisión y gestión contable.</p>
+    <p class="detail-note">Organización, trazabilidad y tecnología para facilitar la gestión contable de operaciones con criptoactivos.</p>
+    <p class="detail-fine">No certifica estados financieros ni sustituye al contador. Es una herramienta de organización y preparación de información.</p>
+    <h4 class="detail-sub">Funcionalidades</h4>
+    <ul class="detail-list">
+      <li>Organización y clasificación de transacciones.</li>
+      <li>Consolidación de movimientos de billeteras y exchanges.</li>
+      <li>Preparación de reportes de operaciones.</li>
+      <li>Organización de soportes y documentación.</li>
+      <li>Identificación de información relevante para la gestión contable.</li>
+      <li>Asistencia en la preparación de información para contadores y asesores.</li>
+    </ul>
+    <div class="detail-cta"><a class="btn primary" href="#contacto">Consultar servicio</a></div>
+  </dialog>
   <footer id="contacto">
     <div class="contact-grid">
       <div>
-        <h4>Escríbenos</h4>
-        <p class="copyline" style="margin-bottom:10px">contacto@emporinex.com</p>
-        <button class="copy-btn" id="copyEmail" type="button">Copiar correo</button>
+        <div class="eyebrow"><span class="rule"></span>Contacto</div>
+        <h2 style="font-size:clamp(24px,3vw,32px); margin-top:10px">Hablemos de tu necesidad</h2>
+        <p class="copyline">Escríbenos o contáctanos por WhatsApp. Estamos para orientarte sobre nuestros servicios.</p>
+        <div class="contact-methods">
+          <a class="contact-method" href="mailto:contacto@emporinex.com">Correo · contacto@emporinex.com</a>
+          <a class="contact-method" href="https://wa.me/573008625561?text=Hola%20Emporinex%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer">WhatsApp · +57 300 862 5561</a>
+          <a class="contact-method" href="https://wa.me/573002250484?text=Hola%20Emporinex%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer">WhatsApp · +57 300 225 0484</a>
+        </div>
       </div>
       <div>
-        <h4>Síguenos</h4>
-        <p class="copyline">LinkedIn y X &mdash; cuentas en configuración, enlaces próximamente.</p>
-        <div class="social-row">
-          <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 10v7M7 7.2v.01M11 17v-4.5c0-1.4 1-2.5 2.5-2.5S16 11.1 16 12.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-          <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        </div>
+        <h4>Envíanos tu consulta</h4>
+        <form class="contact-form" id="contactForm">
+          <label>Nombre<input name="nombre" autocomplete="name" required></label>
+          <label>Correo electrónico<input name="correo" type="email" autocomplete="email" required></label>
+          <label class="full">Servicio de interés
+            <select name="servicio" required>
+              <option value="" selected disabled>Selecciona un servicio</option>
+              <option>Preventive Block</option>
+              <option>Forensic Wallet Tracing</option>
+              <option>OTC Trading &amp; Global Digital Asset Solutions</option>
+              <option>Asesoría Inteligente en Criptoactivos</option>
+              <option>Soluciones de IA a la Medida</option>
+              <option>Gestión Contable de Criptoactivos</option>
+              <option>Otro tema</option>
+            </select>
+          </label>
+          <label class="full">Mensaje<textarea name="mensaje" required></textarea></label>
+          <p class="form-note">Al enviar, se abrirá un correo para que puedas revisar y enviar tu consulta.</p>
+          <button class="btn primary submit" type="submit">Preparar correo</button>
+        </form>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>Emporinex &mdash; Colombia</span>
+      <span class="foot-brand"><img class="foot-lockup" src="emporinex-lockup-v2.png" width="320" height="77" alt="Emporinex &mdash; Digital Finance &amp; Intelligence"></span>
       <span>Operado por SERVIGLOBAL DE COLOMBIA S.A.S.</span>
     </div>
   </footer>
@@ -476,29 +712,34 @@ footer{border-top:1px solid var(--rule); padding-block:40px 48px; margin-top:20p
 
 <script>
 (function(){
-  var btn = document.getElementById('copyEmail');
-  if(!btn) return;
-  btn.addEventListener('click', function(){
-    var email = 'contacto@emporinex.com';
-    function fallback(){
-      var r = document.createRange();
-      var span = document.createElement('span');
-      span.textContent = email;
-      span.style.position='fixed'; span.style.opacity='0';
-      document.body.appendChild(span);
-      r.selectNode(span);
-      var sel = window.getSelection();
-      sel.removeAllRanges(); sel.addRange(r);
-      try{ document.execCommand('copy'); }catch(e){}
-      sel.removeAllRanges();
-      document.body.removeChild(span);
-    }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(email).then(function(){
-        btn.textContent = 'Copiado';
-        setTimeout(function(){ btn.textContent = 'Copiar correo'; }, 1800);
-      }).catch(fallback);
-    } else { fallback(); btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar correo'; }, 1800); }
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    var data = new FormData(form);
+    var subject = 'Consulta Emporinex: ' + data.get('servicio');
+    var body = 'Nombre: ' + data.get('nombre') + '\nCorreo: ' + data.get('correo') + '\nServicio: ' + data.get('servicio') + '\n\nMensaje:\n' + data.get('mensaje');
+    window.location.href = 'mailto:contacto@emporinex.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+
+(function(){
+  var modals = document.querySelectorAll('.svc-modal');
+  if(!modals.length) return;
+  document.querySelectorAll('[data-modal]').forEach(function(link){
+    link.addEventListener('click', function(event){
+      event.preventDefault();
+      var dialog = document.getElementById(link.getAttribute('data-modal'));
+      if(dialog && dialog.showModal){ dialog.showModal(); }
+    });
+  });
+  modals.forEach(function(dialog){
+    var closeBtn = dialog.querySelector('.modal-close');
+    if(closeBtn){ closeBtn.addEventListener('click', function(){ dialog.close(); }); }
+    dialog.addEventListener('click', function(event){ if(event.target === dialog){ dialog.close(); } });
+    dialog.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click', function(){ dialog.close(); });
+    });
   });
 })();
 </script>

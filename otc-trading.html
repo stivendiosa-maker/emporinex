@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OTC Trading &amp; Global Digital Asset Solutions · Emporinex</title>
+<meta name="description" content="Compra y venta de activos digitales, mesa OTC para operaciones de alto volumen y soluciones internacionales de pagos y liquidación con activos digitales.">
+<meta name="theme-color" content="#03091B">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03091B; --bg-deep:#020617; --surface:#071A35; --surface-2:#0A2450;
+  --ink:#F3F7FC; --ink-soft:#A7BCD4; --rule:rgba(177,211,245,.16);
+  --blue:#168BFF; --teal:#00E1F0; --aqua:#73DDF3; --mono:#9BC9E8;
+  --card-shadow:0 24px 60px -28px rgba(0,0,0,.75);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 620px at 86% -6%, color-mix(in srgb, var(--teal) 24%, transparent), transparent 60%),
+    radial-gradient(900px 500px at 6% 8%, color-mix(in srgb, var(--blue) 14%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  background-attachment:fixed;
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+}
+.wrap{max-width:1180px; margin:0 auto; position:relative}
+a{color:var(--teal); text-decoration:none}
+h1,h2,h3{font-family:'Montserrat',system-ui,sans-serif; font-weight:600; letter-spacing:-.015em; margin:0; text-wrap:balance}
+p{margin:0}
+::selection{background:var(--teal); color:var(--bg-deep)}
+:focus-visible{outline:2px solid var(--teal); outline-offset:3px}
+img{max-width:100%}
+
+/* header */
+.site-header{padding-block:20px 14px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap}
+.brand{display:block; flex:none}
+.brand img{display:block; width:280px; height:auto; filter:drop-shadow(0 4px 18px rgba(0,174,255,.13))}
+.site-nav{display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-size:14px}
+.site-nav a{color:var(--ink-soft)}
+.site-nav a:hover{color:var(--ink)}
+@media(max-width:720px){.brand img{width:220px}.site-nav{font-size:13px; gap:16px}}
+
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono'; font-size:12px; letter-spacing:.07em; color:var(--teal); text-transform:uppercase}
+.eyebrow .rule{width:18px; height:1px; background:var(--teal); display:inline-block}
+
+.btn{display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:999px; font-size:14px; font-weight:600; border:1px solid transparent; white-space:nowrap; transition:filter .15s ease, border-color .15s ease, color .15s ease}
+.btn svg{width:14px; height:14px}
+.btn.primary{background:linear-gradient(135deg,var(--teal),var(--blue)); color:#04161A}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{color:var(--ink); border-color:var(--rule); background:color-mix(in srgb,var(--surface) 55%,transparent)}
+.btn.ghost:hover{border-color:var(--teal); color:var(--teal)}
+
+/* hero */
+.hero{padding-block:34px 20px; text-align:center}
+.hero .eyebrow{justify-content:center}
+.hero h1{font-size:clamp(30px,4.1vw,50px); line-height:1.08; margin:16px auto 0; max-width:24ch}
+.hero h1 .hl{background:linear-gradient(100deg,var(--teal),var(--blue)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero .lede{color:var(--ink-soft); font-size:15.5px; margin:16px auto 0; max-width:72ch}
+.hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; justify-content:center}
+section{padding-block:56px}
+.section-head{max-width:760px; margin-bottom:30px}
+.section-head h2{font-size:clamp(24px,3vw,34px); margin-top:10px}
+.section-head p{color:var(--ink-soft); font-size:15px; margin-top:12px}
+
+/* components */
+.comp-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
+@media(max-width:920px){.comp-grid{grid-template-columns:1fr}}
+.comp-card{background:var(--surface); border:1px solid var(--rule); border-radius:16px; padding:24px; box-shadow:var(--card-shadow); display:flex; flex-direction:column; gap:12px; transition:transform .15s ease, border-color .15s ease}
+.comp-card:hover{transform:translateY(-4px); border-color:color-mix(in srgb,var(--accent) 55%,var(--rule))}
+.comp-card:nth-child(1){--accent:var(--teal)}
+.comp-card:nth-child(2){--accent:var(--blue)}
+.comp-card:nth-child(3){--accent:var(--aqua)}
+.comp-top{display:flex; align-items:center; justify-content:space-between; gap:10px}
+.comp-num{font-family:'JetBrains Mono'; font-size:11.5px; color:var(--accent); letter-spacing:.08em}
+.comp-ico{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; color:var(--accent); background:color-mix(in srgb,var(--accent) 15%,transparent)}
+.comp-ico svg{width:22px; height:22px}
+.comp-card .tag{font-family:'JetBrains Mono'; font-size:11px; color:var(--accent); letter-spacing:.05em}
+.comp-card h3{font-size:19px}
+.comp-card p{color:var(--ink-soft); font-size:14px; line-height:1.6}
+.comp-card ul{list-style:none; margin:2px 0 0; padding:0; display:grid; gap:7px}
+.comp-card li{display:flex; gap:8px; align-items:flex-start; font-size:13px; color:var(--ink-soft); line-height:1.45}
+.comp-card li::before{content:"✓"; color:var(--accent); font-weight:700}
+
+/* global payments callout */
+.payments-block{background:radial-gradient(600px 300px at 88% -10%, color-mix(in srgb,var(--teal) 16%,transparent), transparent 70%), linear-gradient(160deg,var(--surface),var(--surface-2)); border:1px solid var(--rule); border-radius:20px; padding:clamp(24px,3.4vw,40px); box-shadow:var(--card-shadow); position:relative; overflow:hidden}
+.payments-block .tag{font-family:'JetBrains Mono'; font-size:12px; color:var(--teal); letter-spacing:.05em}
+.payments-block h2{font-size:clamp(23px,2.8vw,32px); margin-top:10px}
+.payments-block > p{color:var(--ink-soft); font-size:15px; margin-top:12px; max-width:78ch}
+.payments-block > p + p{margin-top:9px; font-size:14px}
+.mod-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px}
+@media(max-width:760px){.mod-grid{grid-template-columns:1fr}}
+.mod-card{background:color-mix(in srgb,var(--bg) 45%,transparent); border:1px solid var(--rule); border-radius:14px; padding:20px}
+.mod-label{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono'; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--blue); border:1px solid color-mix(in srgb,var(--blue) 40%,var(--rule)); border-radius:999px; padding:4px 10px}
+.mod-card:nth-child(2) .mod-label{color:var(--teal); border-color:color-mix(in srgb,var(--teal) 40%,var(--rule))}
+.mod-card h3{font-size:17px; margin-top:12px}
+.mod-card p{color:var(--ink-soft); font-size:13.5px; margin-top:8px}
+.mod-card ul{list-style:none; margin:14px 0 0; padding:0; display:grid; gap:6px}
+.mod-card li{display:flex; gap:8px; font-size:13px; color:var(--ink-soft); line-height:1.45}
+.mod-card li::before{content:"—"; color:var(--blue)}
+.mod-card:nth-child(2) li::before{color:var(--teal)}
+.note{display:flex; gap:10px; margin-top:18px; padding:12px 14px; border:1px solid color-mix(in srgb,var(--teal) 32%,var(--rule)); border-left:3px solid var(--teal); border-radius:0 10px 10px 0; background:color-mix(in srgb,var(--teal) 8%,transparent); color:var(--ink-soft); font-size:12.5px; line-height:1.55}
+
+/* why */
+.why-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(205px,1fr)); gap:16px}
+.why-card{background:var(--surface); border:1px solid var(--rule); border-radius:14px; padding:20px; transition:border-color .15s ease, transform .15s ease}
+.why-card:hover{border-color:color-mix(in srgb,var(--teal) 45%,var(--rule)); transform:translateY(-3px)}
+.why-ico{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; color:var(--teal); background:color-mix(in srgb,var(--teal) 13%,transparent)}
+.why-ico svg{width:19px; height:19px}
+.why-num{font-family:'JetBrains Mono'; font-size:10.5px; color:var(--teal); letter-spacing:.08em; float:right}
+.why-card h3{font-size:15px; margin-top:12px}
+.why-card p{color:var(--ink-soft); font-size:12.8px; margin-top:6px; line-height:1.55}
+
+/* process */
+.process{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:8px}
+.process-step{position:relative; padding-top:6px}
+.process-step:not(:last-child)::after{content:""; position:absolute; top:24px; left:calc(50% + 20px); width:calc(100% - 26px); border-top:1px dashed color-mix(in srgb,var(--teal) 45%,transparent)}
+.process-num{width:38px; height:38px; border-radius:50%; display:grid; place-items:center; border:1px solid var(--teal); color:var(--teal); background:var(--bg); font:11.5px 'JetBrains Mono'; margin-bottom:12px}
+.process-step h3{font-size:14px}
+.process-step p{color:var(--ink-soft); font-size:12.5px; margin-top:6px; line-height:1.5}
+@media(max-width:860px){
+  .process{grid-template-columns:1fr; gap:0}
+  .process-step{padding:0 0 20px 52px}
+  .process-step:not(:last-child)::after{top:38px; left:18px; width:0; height:calc(100% - 32px); border-top:0; border-left:1px dashed color-mix(in srgb,var(--teal) 45%,transparent)}
+  .process-num{position:absolute; left:0; top:0; margin:0}
+}
+
+/* quote */
+.quote-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:32px; align-items:start}
+@media(max-width:860px){.quote-grid{grid-template-columns:1fr; gap:22px}}
+.quote-info h2{font-size:clamp(22px,2.7vw,31px); margin-top:10px}
+.quote-info p{color:var(--ink-soft); font-size:14.5px; margin-top:12px; max-width:48ch}
+.contact-list{display:grid; gap:10px; margin-top:22px}
+.contact-list a{display:flex; gap:10px; align-items:center; border:1px solid var(--rule); background:var(--surface); border-radius:10px; padding:11px 14px; font-size:13.5px; color:var(--ink)}
+.contact-list a:hover{border-color:var(--teal); color:var(--teal)}
+.quote-form{display:grid; grid-template-columns:1fr 1fr; gap:13px; background:color-mix(in srgb,var(--surface) 65%,transparent); border:1px solid var(--rule); border-radius:16px; padding:clamp(18px,2.4vw,26px); box-shadow:var(--card-shadow)}
+.quote-form label{display:grid; gap:5px; font-size:11.5px; color:var(--ink-soft)}
+.quote-form label.full{grid-column:1/-1}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%; border:1px solid var(--rule); border-radius:8px; background:var(--bg); color:var(--ink); padding:10px 11px; font:13.5px 'Inter',system-ui,sans-serif}
+.quote-form textarea{min-height:92px; resize:vertical}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:2px solid var(--teal); outline-offset:1px}
+.quote-form .submit{grid-column:1/-1; justify-self:start; cursor:pointer; margin-top:2px}
+.form-hint{grid-column:1/-1; color:var(--ink-soft); font-size:11.5px; margin:0; line-height:1.5}
+@media(max-width:560px){.quote-form{grid-template-columns:1fr}.quote-form label.full,.form-hint{grid-column:auto}}
+
+/* final cta */
+.final-cta{text-align:center; border-top:1px solid var(--rule); margin-top:18px; padding-block:52px}
+.final-cta h2{font-size:clamp(23px,2.9vw,33px); max-width:26ch; margin-inline:auto}
+.final-cta p{color:var(--ink-soft); font-size:14.5px; max-width:60ch; margin:12px auto 0}
+.final-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px}
+
+/* legal + footer */
+.legal{color:var(--mono); font-size:11.5px; line-height:1.6; border-top:1px solid var(--rule); padding-top:18px; margin-top:8px; max-width:95ch}
+.site-footer{border-top:1px solid var(--rule); margin-top:26px; padding-block:26px 34px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:'JetBrains Mono'; font-size:11.5px; color:var(--mono)}
+.site-footer img{display:block; width:132px; height:auto; opacity:.9}
+.site-footer a{color:var(--ink-soft)}
+.site-footer a:hover{color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Emporinex — inicio">
+      <img src="emporinex-lockup-v2.png" width="320" height="77" alt="EMPORINEX · Digital Finance &amp; Intelligence">
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#nosotros">Quiénes somos</a>
+      <a href="index.html#conocimiento">Conocimiento</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="hero" id="servicio">
+    <div class="hero-head">
+      <div class="eyebrow"><span class="rule"></span>OTC &amp; Digital Asset Operations<span class="rule"></span></div>
+      <h1>Liquidez digital. <span class="hl">Operaciones globales.</span> Soluciones a tu medida.</h1>
+      <p class="lede">Conectamos personas y empresas con soluciones para comprar, vender y transferir activos digitales. Cada operación se estructura con cotización previa, acompañamiento y alternativas de liquidación según su necesidad.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#cotizacion">Solicitar cotización
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn ghost" href="#componentes">Explorar soluciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. COMPONENTES -->
+  <section id="componentes" aria-labelledby="comp-title">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>El servicio</div>
+      <h2 id="comp-title">Tres formas de operar con activos digitales</h2>
+      <p>Una misma estructura de atención para operaciones individuales, de alto volumen y de alcance internacional.</p>
+    </div>
+    <div class="comp-grid">
+      <article class="comp-card">
+        <div class="comp-top"><span class="comp-num">01</span><span class="comp-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-2.1 2.5-2.1s2.5.8 2.5 1.9c0 2.6-5 1.4-5 4 0 1.1 1.1 1.9 2.5 1.9s2.5-.8 2.5-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></div>
+        <span class="tag">Digital Asset Trading</span>
+        <h3>Compra y venta de activos digitales</h3>
+        <p>Accede a operaciones de compra y venta de activos digitales como USDT y otros activos disponibles, con cotizaciones personalizadas y condiciones definidas antes de cada transacción.</p>
+        <p>Facilitamos procesos de conversión entre monedas fiduciarias y activos digitales, con atención personalizada y alternativas operativas según cada cliente.</p>
+        <ul>
+          <li>Compra de activos digitales.</li>
+          <li>Venta y conversión a monedas fiduciarias, según disponibilidad.</li>
+          <li>Atención a clientes individuales y empresariales.</li>
+          <li>Cotizaciones según volumen y condiciones de mercado.</li>
+          <li>Operaciones mediante redes blockchain compatibles.</li>
+          <li>Acompañamiento en negociación y liquidación.</li>
+        </ul>
+      </article>
+
+      <article class="comp-card">
+        <div class="comp-top"><span class="comp-num">02</span><span class="comp-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l5-6 4 3 5-8 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+        <span class="tag">OTC Trading Desk</span>
+        <h3>Mesa OTC — Operaciones de alto volumen</h3>
+        <p>Diseñada para empresas, inversionistas y operadores que necesitan ejecutar transacciones de mayor cuantía con atención personalizada.</p>
+        <p>La mesa OTC permite gestionar operaciones mediante cotizaciones directas y condiciones acordadas previamente, con alternativas de ejecución y liquidación adaptadas al volumen de cada operación.</p>
+        <ul>
+          <li>Negociación de grandes volúmenes.</li>
+          <li>Cotizaciones personalizadas.</li>
+          <li>Atención directa durante la operación.</li>
+          <li>Coordinación de ejecución y liquidación.</li>
+          <li>Evaluación de necesidades recurrentes de liquidez.</li>
+          <li>Atención a clientes empresariales e institucionales.</li>
+        </ul>
+      </article>
+
+      <article class="comp-card">
+        <div class="comp-top"><span class="comp-num">03</span><span class="comp-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.4 4 5.5 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.5-4-9s1.4-6.6 4-9z" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+        <span class="tag">Global Digital Payments</span>
+        <h3>Tus operaciones comerciales, conectadas con el mundo</h3>
+        <p>Conectamos operaciones entre diferentes mercados mediante infraestructura blockchain y redes de activos digitales.</p>
+        <p>Evaluamos y coordinamos transferencias y liquidaciones según el destino, la red disponible y los requisitos aplicables a cada operación.</p>
+        <ul>
+          <li>Transferencias de USDT a billeteras de terceros.</li>
+          <li>Selección de redes blockchain compatibles.</li>
+          <li>Evaluación de pagos a cuentas bancarias internacionales.</li>
+          <li>Coordinación de liquidaciones según proveedores disponibles.</li>
+          <li>Seguimiento y confirmación de la operación.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. GLOBAL PAYMENTS -->
+  <section id="global-payments" aria-labelledby="gp-title">
+    <div class="payments-block">
+      <div class="tag">Global Digital Payments</div>
+      <h2 id="gp-title">Tus operaciones comerciales, conectadas con el mundo.</h2>
+      <p>Si tu empresa necesita transferir USDT a un proveedor, socio comercial o beneficiario en otro país, evaluamos y coordinamos la operación de acuerdo con el destino, la red disponible y los requisitos aplicables.</p>
+      <p>Además de las transferencias directas a billeteras digitales, podemos evaluar alternativas de liquidación en moneda local mediante cuentas bancarias de beneficiarios, según el país, los proveedores disponibles y las condiciones de cada operación.</p>
+
+      <div class="mod-grid">
+        <div class="mod-card">
+          <span class="mod-label">A · Digital Wallet Settlement</span>
+          <h3>Transferencias a billeteras digitales</h3>
+          <p>Envío de activos digitales directamente a billeteras de terceros.</p>
+          <ul>
+            <li>Envío de USDT y otros activos disponibles.</li>
+            <li>Selección de redes blockchain compatibles.</li>
+            <li>Transferencias a proveedores y beneficiarios internacionales.</li>
+            <li>Validación de dirección y red antes de ejecutar.</li>
+            <li>Confirmación de la transacción y su identificador blockchain.</li>
+          </ul>
+        </div>
+        <div class="mod-card">
+          <span class="mod-label">B · International Bank Settlement</span>
+          <h3>Liquidación en cuentas bancarias</h3>
+          <p>Coordinación de pagos internacionales con liquidación en moneda local, mediante cuentas bancarias de beneficiarios y canales habilitados.</p>
+          <ul>
+            <li>Evaluación de pagos a cuentas bancarias internacionales.</li>
+            <li>Coordinación de liquidaciones en moneda local.</li>
+            <li>Evaluación de disponibilidad por país.</li>
+            <li>Cotización de tasas, costos y tiempos antes de confirmar.</li>
+            <li>Seguimiento y confirmación de la operación.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note"><span>La disponibilidad de destinos, monedas y modalidades no es permanente. Cada solicitud se valida antes de confirmar la operación.</span></div>
+    </div>
+  </section>
+
+  <!-- 6. POR QUÉ EMPORINEX -->
+  <section id="por-que" aria-labelledby="why-title">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>¿Por qué Emporinex?</div>
+      <h2 id="why-title">Acompañamiento en cada etapa de la operación</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-card"><span class="why-num">01</span><div class="why-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20c.8-3.6 3.7-5.6 7.5-5.6s6.7 2 7.5 5.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><h3>Atención personalizada</h3><p>Acompañamiento durante la estructuración y ejecución de cada operación.</p></article>
+      <article class="why-card"><span class="why-num">02</span><div class="why-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><h3>Soluciones de volumen</h3><p>Evaluación de necesidades de liquidez para operaciones de mayor cuantía.</p></article>
+      <article class="why-card"><span class="why-num">03</span><div class="why-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18M12 3c2.6 2.4 4 5.5 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.5-4-9s1.4-6.6 4-9z" stroke="currentColor" stroke-width="1.5"/></svg></div><h3>Alcance internacional</h3><p>Coordinación de operaciones con contrapartes y proveedores en diferentes mercados.</p></article>
+      <article class="why-card"><span class="why-num">04</span><div class="why-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.7"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Transparencia operativa</h3><p>Condiciones, cotizaciones y costos comunicados antes de confirmar cada operación.</p></article>
+      <article class="why-card"><span class="why-num">05</span><div class="why-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 21h10M12 18v3M7 9h4M7 12h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Infraestructura digital</h3><p>Uso de redes blockchain compatibles para la transferencia y liquidación de activos digitales.</p></article>
+    </div>
+  </section>
+
+  <!-- 7. PROCESO -->
+  <section id="proceso" aria-labelledby="proc-title">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>Proceso operativo</div>
+      <h2 id="proc-title">Una operación estructurada de principio a fin</h2>
+    </div>
+    <div class="process">
+      <div class="process-step"><div class="process-num">01</div><h3>Solicitud</h3><p>El cliente describe el activo, volumen, modalidad y destino de la operación.</p></div>
+      <div class="process-step"><div class="process-num">02</div><h3>Evaluación</h3><p>Revisamos disponibilidad, viabilidad, contraparte, origen y destino de fondos y requisitos aplicables.</p></div>
+      <div class="process-step"><div class="process-num">03</div><h3>Cotización</h3><p>Presentamos condiciones económicas, tasas, costos y tiempos estimados.</p></div>
+      <div class="process-step"><div class="process-num">04</div><h3>Confirmación y ejecución</h3><p>Completadas las verificaciones y aceptadas las condiciones, coordinamos la operación.</p></div>
+      <div class="process-step"><div class="process-num">05</div><h3>Liquidación y seguimiento</h3><p>Confirmamos la transferencia o liquidación y facilitamos la información de seguimiento.</p></div>
+    </div>
+  </section>
+
+  <!-- 8. COTIZACIÓN -->
+  <section id="cotizacion" aria-labelledby="quote-title">
+    <div class="quote-grid">
+      <div class="quote-info">
+        <div class="eyebrow"><span class="rule"></span>Solicitud de cotización</div>
+        <h2 id="quote-title">Cuéntanos qué operación necesitas realizar.</h2>
+        <p>Nuestro equipo evaluará tu solicitud y te contactará para revisar disponibilidad y condiciones.</p>
+        <div class="contact-list">
+          <a href="mailto:contacto@emporinex.com">Correo · contacto@emporinex.com</a>
+          <a href="https://wa.me/573008625561?text=Hola%20Emporinex%2C%20quiero%20consultar%20una%20operaci%C3%B3n%20de%20activos%20digitales" target="_blank" rel="noopener noreferrer">WhatsApp · +57 300 862 5561</a>
+        </div>
+      </div>
+
+      <form class="quote-form" id="quoteForm" novalidate>
+        <label>Nombre o razón social<input name="nombre" autocomplete="name" required></label>
+        <label>Correo electrónico<input name="correo" type="email" autocomplete="email" required></label>
+        <label>País de residencia o de la empresa<input name="pais" autocomplete="country-name"></label>
+        <label>Tipo de operación
+          <select name="tipo" required>
+            <option value="" selected disabled>Selecciona una opción</option>
+            <option>Compra de activos digitales</option>
+            <option>Venta de activos digitales</option>
+            <option>Operación OTC de alto volumen</option>
+            <option>Transferencia internacional de USDT</option>
+            <option>Pago internacional a cuenta bancaria</option>
+            <option>Otra operación</option>
+          </select>
+        </label>
+        <label>Activo digital o moneda requerida<input name="activo" placeholder="Ej. USDT"></label>
+        <label>Volumen estimado<input name="volumen" placeholder="Ej. monto o rango"></label>
+        <label>País de destino<input name="destino"></label>
+        <label>Modalidad de recepción
+          <select name="modalidad">
+            <option value="" selected>Selecciona una opción</option>
+            <option>Billetera digital</option>
+            <option>Cuenta bancaria</option>
+            <option>Por definir</option>
+          </select>
+        </label>
+        <label class="full">Mensaje o descripción de la operación<textarea name="mensaje"></textarea></label>
+        <button class="btn primary submit" type="submit">Solicitar cotización
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-hint" id="formHint">Al enviar, se abrirá tu gestor de correo con la solicitud redactada para que la revises y la envíes. No se envían contraseñas ni datos sensibles de billeteras.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta" aria-labelledby="cta-title">
+    <h2 id="cta-title">¿Necesitas comprar, vender o transferir activos digitales?</h2>
+    <p>Cuéntanos el volumen, el activo y el país de destino. Nuestro equipo evaluará tu requerimiento y te presentará una alternativa operativa.</p>
+    <div class="final-actions">
+      <a class="btn primary" href="#cotizacion">Solicitar una cotización</a>
+      <a class="btn ghost" href="mailto:contacto@emporinex.com">Contactar con Emporinex</a>
+    </div>
+  </section>
+
+  <p class="legal">Las operaciones están sujetas a disponibilidad de liquidez, verificación de clientes y contrapartes, revisión de origen y destino de fondos, compatibilidad de redes, disponibilidad de proveedores y cumplimiento de las disposiciones aplicables en cada jurisdicción.</p>
+
+  <footer class="site-footer">
+    <img src="emporinex-lockup-v2.png" width="320" height="77" alt="Emporinex">
+    <span>© 2026 Emporinex · <a href="index.html">Volver al sitio</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('quoteForm');
+  if(!form) return;
+  var hint = document.getElementById('formHint');
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if(!form.reportValidity()) return;
+    var d = new FormData(form);
+    var subject = 'Solicitud de cotización OTC · ' + (d.get('tipo') || 'Operación');
+    var lines = [
+      'Nombre o razón social: ' + (d.get('nombre') || ''),
+      'Correo: ' + (d.get('correo') || ''),
+      'País de residencia o empresa: ' + (d.get('pais') || ''),
+      'Tipo de operación: ' + (d.get('tipo') || ''),
+      'Activo o moneda: ' + (d.get('activo') || ''),
+      'Volumen estimado: ' + (d.get('volumen') || ''),
+      'País de destino: ' + (d.get('destino') || ''),
+      'Modalidad de recepción: ' + (d.get('modalidad') || ''),
+      '',
+      'Descripción de la operación:',
+      (d.get('mensaje') || '')
+    ];
+    var mailto = 'mailto:contacto@emporinex.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    if(hint){ hint.textContent = 'Se está abriendo tu gestor de correo con la solicitud redactada. Revísala y envíala para completar la solicitud.'; }
+    window.location.href = mailto;
+  });
+})();
+</script>
+</body>
+</html>
